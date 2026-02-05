@@ -98,6 +98,8 @@ This repository is licensed under the [MIT License](LICENSE.md).
 - [Liam Powell's website](https://liampwl.com) ([source code](https://github.com/liampwl/liampwl.github.io))
 - [Anton Lundborg's website](https://www.arlundborg.com) ([source code](https://github.com/ARLundborg/web))
 - [Taeyoung Kim's website](https://tykim.me) ([source code](https://github.com/SangsChicom/tykim.github.io))
+- [Niladri Kal's website](https://niladrik.github.io) ([source code](https://github.com/niladrik/niladrik.github.io))
+- [Somjit Roy's website](https://roy-sr-007.github.io) ([source code](https://github.com/Roy-SR-007/roy-sr-007.github.io))
 - [Momchil Tomov's website](https://momchiltomov.com)
 - [Arthur Douillard's website](https://arthurdouillard.com)
 - [Benjamin Hattemer's website](https://benjaminhattemer.com)
