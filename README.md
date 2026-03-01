@@ -113,5 +113,7 @@ This repository is licensed under the [MIT License](LICENSE.md).
 
 ## Related resources
 
-- [latex-cv](https://github.com/pmichaillat/latex-cv) - This LaTeX template produces a minimalist academic CV, which you can post on your website. The CV should be named `cv.pdf` and placed in the `static` folder. It will be accessible from the homepage via a social icon.
-- [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces a minimalist research paper, which you can post on your website. This is the template used to produce the mock papers on the illustrative website: [here](https://pascalmichaillat.org/hugo-website/papers/paper3/paper3.pdf), [here](https://pascalmichaillat.org/hugo-website/papers/paper1/paper1.pdf), and [here](https://pascalmichaillat.org/hugo-website/papers/paper2/paper2.pdf).
+- [latex-cv](https://github.com/pmichaillat/latex-cv) - This LaTeX template produces a minimalist academic CV, which you can post on your website.
+- [latex-presentation](https://github.com/pmichaillat/latex-presentation) - This LaTeX template produces minimalist research presentations, which you can post on your website.
+- [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces minimalist research papers, which you can post on your website.
+- [latex-book](https://github.com/pmichaillat/latex-book) - This LaTeX template produces minimalist lecture notes and research monographs, which you can post on your website.
