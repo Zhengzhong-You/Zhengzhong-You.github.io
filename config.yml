@@ -79,25 +79,25 @@ params:
         - name: CV
           url: cv.pdf
         - name: Email
-          url: mailto:igelfeld@regensburg.edu
+          url: mailto:user@gmail.com
         - name: Zoom
-          url: https://www.zoom.us/my/igelfeld
+          url: https://www.zoom.us/my/user
         - name: Location
           url: location/
         - name: Office Hours
           url: officehours/
         - name: Google Scholar
-          url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
+          url: https://scholar.google.com/citations?user=user
         - name: GitHub
-          url: https://github.com/pmichaillat
-        - name: Substack
-          url: https://pmichaillat.substack.com
+          url: https://github.com/user
         - name: YouTube
-          url: https://www.youtube.com/@pmichaillat
+          url: https://www.youtube.com/@user
+        - name: Substack
+          url: https://user.substack.com
         - name: Twitter
-          url: https://x.com/pmichaillat
+          url: https://x.com/user
         - name: Bluesky
-          url: https://bsky.app/profile/pmichaillat.bsky.social
+          url: https://bsky.app/profile/user.bsky.social
 
     assets:
         disableScrollBarStyle: true
