@@ -1,5 +1,5 @@
-baseURL: "https://pascalmichaillat.org/hugo-website/" 
-title: Moritz-Maria von Igelfeld
+baseURL: "https://zhengzhong-you.github.io/"
+title: Zhengzhong You
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -8,115 +8,118 @@ pagination:
   pagerSize: 20
 
 taxonomies:
-    tag: tags
+  tag: tags
 
 menu:
-    main:
-        - name: Books
-          url: books/
-          weight: 5 
-        - name: Papers
-          url: papers/
-          weight: 2
-        - name: Courses
-          url: courses/
-          weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
-        - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-          weight: 6
+  main:
+    - name: Papers
+      url: papers/
+      weight: 2
+    - name: Software
+      url: software/
+      weight: 3
+    - name: Talks
+      url: talks/
+      weight: 4
+    - name: CV
+      url: cv.pdf
+      weight: 5
+    - name: Archive
+      url: archive/
+      weight: 6
 
 params:
-    description: "This website hosts Moritz-Maria von Igelfeld's research papers, books, course materials, data, curriculum vitae, and contact information."
-    author: Moritz-Maria von Igelfeld
-    # googleAnalyticsID: "G-XXXXX"
-    DateFormat: "January 2006"
-    defaultTheme: light
-    hideFooter: false
-    disableThemeToggle: true
-    ShowShareButtons: false
-    ShowReadingTime: false
-    disableSpecial1stPost: true
-    disableAnchoredHeadings: true
-    ShowPostNavLinks: false
-    ShowBreadCrumbs: false
-    ShowCodeCopyButtons: true
-    ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
-    ShowToc: false
-    disableScrollToTop: true
-    TocOpen: true
-    ShowWordCount: false
-    UseHugoToc: true
-    comments: false
-    math: true
-    profileMode:
-          enabled: true
-          title: Professor Dr von Igelfeld
-          subtitle: "I am a Professor in the Institute of Romance Philology at the University of Regensburg, Germany. My research focuses on Portuguese irregular verbs. I was a doctoral student of Professor Dr Dieter Vogelsang in Munich, and later a second assistant of Professor Walter Schoeffler-Henschell at the University of Wiesbaden."
-          imageUrl: "picture.jpeg"
-          imageWidth: 160
-          imageHeight: 160
-          buttons:
-            - name: Papers
-              url: papers/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
-            - name: Courses
-              url: courses/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
-            - name: Blog
-              url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+  description: "Personal website of Zhengzhong You, an operations research researcher working on exact and learning-augmented optimization for routing, scheduling, and inventory systems."
+  author: Zhengzhong You
+  keywords:
+    - operations research
+    - exact optimization
+    - branch-price-and-cut
+    - vehicle routing
+    - learning to branch
+    - RouteOpt
+  DateFormat: "January 2006"
+  defaultTheme: light
+  hideFooter: false
+  disableThemeToggle: true
+  ShowShareButtons: false
+  ShowReadingTime: false
+  disableSpecial1stPost: true
+  disableAnchoredHeadings: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowAllPagesInArchive: false
+  mainSections: ["papers", "software", "talks"]
+  ShowToc: false
+  disableScrollToTop: true
+  TocOpen: true
+  ShowWordCount: false
+  UseHugoToc: true
+  comments: false
+  math: false
+  profileMode:
+    enabled: true
+    title: Zhengzhong You
+    subtitle: |
+      I build exact and learning-augmented optimization methods for routing, scheduling, and inventory problems, with an emphasis on branch-price-and-cut, column generation, and research software for large-scale decision systems.
 
-    socialIcons:
-        - name: CV
-          url: cv.pdf
-        - name: Email
-          url: mailto:user@gmail.com
-        - name: Zoom
-          url: https://www.zoom.us/my/user
-        - name: Location
-          url: location/
-        - name: Office Hours
-          url: officehours/
-        - name: Google Scholar
-          url: https://scholar.google.com/citations?user=user
-        - name: GitHub
-          url: https://github.com/user
-        - name: YouTube
-          url: https://www.youtube.com/@user
-        - name: Substack
-          url: https://user.substack.com
-        - name: Twitter
-          url: https://x.com/user
-        - name: Bluesky
-          url: https://bsky.app/profile/user.bsky.social
+      I received an M.S. in Industrial & Systems Engineering from the University of Florida. My work appears in *Operations Research* and *INFORMS Journal on Computing*, and I am an incoming participant in the MIT-UF-NEU Joint Summer Research Camp.
+    imageUrl: "portrait-mark.svg"
+    imageWidth: 220
+    imageHeight: 220
+    buttons:
+      - name: Papers
+        url: papers/
+      - name: Software
+        url: software/
+      - name: Talks
+        url: talks/
+      - name: CV
+        url: cv.pdf
+      - name: RouteOpt
+        url: https://github.com/Zhengzhong-You/RouteOpt
 
-    assets:
-        disableScrollBarStyle: true
-    cover:
-        hiddenInList: false
-        hiddenInSingle: true
-    label:
-      text: "Moritz-Maria von Igelfeld"
-      icon: favicon.ico
-      iconHeight: 18
+  socialIcons:
+    - name: cv
+      url: cv.pdf
+      title: CV
+    - name: email
+      url: mailto:youzhengzhong0@gmail.com
+      title: Email
+    - name: github
+      url: https://github.com/Zhengzhong-You
+      title: GitHub
+    - name: orcid
+      url: https://orcid.org/0009-0007-3480-5578
+      title: ORCID
+
+  assets:
+    disableScrollBarStyle: true
+    favicon: portrait-mark.svg
+    favicon16x16: portrait-mark.svg
+    favicon32x32: portrait-mark.svg
+    apple_touch_icon: portrait-mark.svg
+    theme_color: "#20344c"
+    msapplication_TileColor: "#20344c"
+  cover:
+    hiddenInList: false
+    hiddenInSingle: true
+  label:
+    text: Zhengzhong You
+    icon: portrait-mark.svg
+    iconHeight: 22
+  footer:
+    text: "Exact optimization, software, and logistics research."
 
 markup:
-    goldmark:
-        renderer:
-            unsafe: true
-    highlight:
-        guessSyntax: true
-        style: autumn 
-    tableOfContents:
-        endLevel: 2
-        ordered: false
-        startLevel: 2
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    guessSyntax: true
+    style: autumn
+  tableOfContents:
+    endLevel: 2
+    ordered: false
+    startLevel: 2

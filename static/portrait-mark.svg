@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Zhengzhong You monogram</title>
+  <desc id="desc">A geometric monogram with routing-inspired nodes and connections.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#20344c"/>
+      <stop offset="55%" stop-color="#2b4d70"/>
+      <stop offset="100%" stop-color="#8f6b39"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2e7cc"/>
+      <stop offset="100%" stop-color="#d7ecff"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="120" fill="url(#bg)"/>
+  <g opacity="0.18" stroke="#f7fbff" stroke-width="3" fill="none">
+    <path d="M110 160C180 120 270 122 338 164C417 213 500 209 550 170"/>
+    <path d="M100 410C169 352 260 336 333 364C420 397 505 386 551 338"/>
+    <path d="M160 520C219 470 314 455 389 483C448 505 501 506 547 476"/>
+  </g>
+  <g stroke="url(#line)" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95">
+    <path d="M135 184L248 184L376 319L506 319"/>
+    <path d="M135 456L300 456L505 186"/>
+    <path d="M245 184L135 456"/>
+  </g>
+  <g fill="#f6efe0">
+    <circle cx="135" cy="184" r="18"/>
+    <circle cx="248" cy="184" r="15"/>
+    <circle cx="376" cy="319" r="15"/>
+    <circle cx="506" cy="319" r="18"/>
+    <circle cx="135" cy="456" r="18"/>
+    <circle cx="300" cy="456" r="15"/>
+    <circle cx="505" cy="186" r="18"/>
+  </g>
+  <g fill="#ffffff">
+    <path d="M207 100h213v30L261 511h-42l147-351H207z"/>
+    <path d="M402 116h34l61 92v36l-61 95h-38l61-96-57-85z"/>
+  </g>
+</svg>
