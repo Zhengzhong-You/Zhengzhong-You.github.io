@@ -1,5 +1,5 @@
 baseURL: "https://zhengzhong-you.github.io/"
-title: Zhengzhong You
+title: Ricky Zhengzhong You
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -29,8 +29,8 @@ menu:
       weight: 6
 
 params:
-  description: "Personal website of Zhengzhong You, an operations research researcher working on exact and learning-augmented optimization for routing, scheduling, and inventory systems."
-  author: Zhengzhong You
+  description: "Personal website of Ricky Zhengzhong You, an operations research researcher working on exact and learning-augmented optimization for routing, scheduling, and inventory systems."
+  author: Ricky Zhengzhong You
   keywords:
     - operations research
     - exact optimization
@@ -60,14 +60,14 @@ params:
   math: false
   profileMode:
     enabled: true
-    title: Zhengzhong You
+    title: Ricky Zhengzhong You
     subtitle: |
       I build exact and learning-augmented optimization methods for routing, scheduling, and inventory problems, with an emphasis on branch-price-and-cut, column generation, and research software for large-scale decision systems.
 
       I received an M.S. in Industrial & Systems Engineering from the University of Florida. My work appears in *Operations Research* and *INFORMS Journal on Computing*, and I am an incoming participant in the MIT-UF-NEU Joint Summer Research Camp.
     imageUrl: "profile-photo.jpeg"
-    imageWidth: 210
-    imageHeight: 210
+    imageWidth: 172
+    imageHeight: 172
     buttons:
       - name: Papers
         url: papers/
@@ -106,7 +106,7 @@ params:
     hiddenInList: false
     hiddenInSingle: true
   label:
-    text: Zhengzhong You
+    text: Ricky Zhengzhong You
     icon: portrait-mark.svg
     iconHeight: 22
   footer:

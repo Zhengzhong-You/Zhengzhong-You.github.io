@@ -1,6 +1,6 @@
-# Zhengzhong You Website
+# Ricky Zhengzhong You Website
 
-This repository contains the source code for the personal website of Zhengzhong You.
+This repository contains the source code for the personal website of Ricky Zhengzhong You.
 
 The site is built with [Hugo](https://gohugo.io/), uses the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme, and starts from the [hugo-website](https://github.com/pmichaillat/hugo-website) template by Pascal Michaillat.
 

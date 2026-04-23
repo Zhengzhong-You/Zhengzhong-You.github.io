@@ -79,10 +79,10 @@ body {
 }
 
 .profile img {
-    width: 210px;
-    height: 210px;
+    width: 172px;
+    height: 172px;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: 20px;
     border: 1px solid rgba(32, 52, 76, 0.08);
     box-shadow: 0 18px 50px rgba(32, 52, 76, 0.20);
 }
@@ -169,9 +169,9 @@ body {
     }
 
     .profile img {
-        width: 176px;
-        height: 176px;
-        border-radius: 24px;
+        width: 148px;
+        height: 148px;
+        border-radius: 18px;
     }
 
     .page-header,
