@@ -79,6 +79,8 @@ params:
       - name: RouteOpt
         url: https://github.com/Zhengzhong-You/RouteOpt
 
+  petCounterApi: ""
+
   socialIcons:
     - name: cv
       url: cv.pdf

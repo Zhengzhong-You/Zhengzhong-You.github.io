@@ -1,0 +1,16 @@
+name = "maomao-pet-counter"
+main = "src/index.js"
+compatibility_date = "2026-04-23"
+
+[vars]
+ALLOWED_ORIGIN = "https://zhengzhong-you.github.io"
+
+[durable_objects]
+bindings = [
+  { name = "PET_COUNTER", class_name = "PetCounter" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["PetCounter"]
+

@@ -78,9 +78,10 @@
         {{- end }}
     </div>
     <script>
-    (() => {
+    (async () => {
       const countKey = 'maomao-pet-count';
       const photoKey = 'maomao-pet-photo-index';
+      const remoteCounterApi = ({{ site.Params.petCounterApi | default "" | jsonify }} || '').trim().replace(/\/+$/, '');
       const countEl = document.getElementById('home-pet-count');
       const btn = document.getElementById('home-pet-button');
       const status = document.getElementById('home-pet-status');
@@ -116,7 +117,7 @@
         'She seems ready for even more attention.'
       ];
 
-      const readCount = () => {
+      const readLocalCount = () => {
         const raw = window.localStorage.getItem(countKey);
         const n = Number.parseInt(raw || '0', 10);
         return Number.isFinite(n) && n >= 0 ? n : 0;
@@ -128,8 +129,37 @@
         return Number.isFinite(n) ? n : -1;
       };
 
-      const writeCount = (n) => {
+      const writeLocalCount = (n) => {
         window.localStorage.setItem(countKey, String(n));
+        countEl.textContent = String(n);
+      };
+
+      const fetchRemoteCount = async () => {
+        const response = await fetch(`${remoteCounterApi}/api/maomao/count`, {
+          method: 'GET',
+          mode: 'cors',
+          cache: 'no-store'
+        });
+        if (!response.ok) throw new Error(`Remote count fetch failed: ${response.status}`);
+        const payload = await response.json();
+        const n = Number.parseInt(String(payload.count ?? 0), 10);
+        return Number.isFinite(n) && n >= 0 ? n : 0;
+      };
+
+      const incrementRemoteCount = async () => {
+        const response = await fetch(`${remoteCounterApi}/api/maomao/pet`, {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-store'
+        });
+        if (!response.ok) throw new Error(`Remote count increment failed: ${response.status}`);
+        const payload = await response.json();
+        const n = Number.parseInt(String(payload.count ?? 0), 10);
+        if (!Number.isFinite(n) || n < 0) throw new Error('Remote counter returned invalid count');
+        return n;
+      };
+
+      const syncDisplayedCount = (n) => {
         countEl.textContent = String(n);
       };
 
@@ -161,17 +191,34 @@
         return next;
       };
 
-      const count = readCount();
+      let count = readLocalCount();
+      if (remoteCounterApi) {
+        try {
+          count = await fetchRemoteCount();
+          window.localStorage.setItem(countKey, String(count));
+        } catch (error) {
+          console.warn('Falling back to browser-local Maomao counter.', error);
+        }
+      }
       const currentIndex = readPhotoIndex();
       const initialIndex = currentIndex >= 0 && currentIndex < gallery.length ? currentIndex : 0;
-      writeCount(count);
+      syncDisplayedCount(count);
       if (currentIndex < 0) writePhotoIndex(initialIndex);
       applyState(gallery[initialIndex], count);
 
-      btn.addEventListener('click', () => {
-        const next = readCount() + 1;
+      btn.addEventListener('click', async () => {
+        let next = readLocalCount() + 1;
+        btn.disabled = true;
+        btn.setAttribute('aria-busy', 'true');
+        if (remoteCounterApi) {
+          try {
+            next = await incrementRemoteCount();
+          } catch (error) {
+            console.warn('Remote Maomao counter failed, using browser-local fallback.', error);
+          }
+        }
+        writeLocalCount(next);
         const nextIndex = chooseNextIndex(readPhotoIndex());
-        writeCount(next);
         if (nextIndex >= 0) {
           writePhotoIndex(nextIndex);
           applyState(gallery[nextIndex], next);
@@ -179,6 +226,8 @@
         image.classList.remove('is-petted');
         void image.offsetWidth;
         image.classList.add('is-petted');
+        btn.disabled = false;
+        btn.removeAttribute('aria-busy');
       });
     })();
     </script>
