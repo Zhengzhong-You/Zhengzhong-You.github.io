@@ -322,6 +322,7 @@ body {
     text-align: center;
     width: 172px;
     max-width: 172px;
+    white-space: pre-line;
 }
 
 .profile-visitor-map {
