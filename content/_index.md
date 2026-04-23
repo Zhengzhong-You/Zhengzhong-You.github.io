@@ -7,8 +7,4 @@ description: "Operations research, exact optimization, and decision-support soft
 
 Come see where recent visitors are viewing the site from 🌍
 
-<div class="visitor-map-widget">
-  <a title="free world map tracker" href="https://smallcounter.com/vmap/1776903274/">
-    <img title="free world map counter" src="https://smallcounter.com/map/view.php?type=180&id=1776903274" alt="world map hits counter" />
-  </a>
-</div>
+{{< visitor-map >}}

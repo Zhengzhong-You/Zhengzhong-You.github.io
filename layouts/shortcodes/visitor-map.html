@@ -1,0 +1,29 @@
+{{- $mapLink := "https://smallcounter.com/vmap/1776903274/" -}}
+{{- $mapImage := "https://smallcounter.com/map/view.php?type=180&id=1776903274" -}}
+<div class="visitor-map-widget" data-map-base="{{ $mapImage }}">
+  <a title="visitor map" href="{{ $mapLink }}" target="_blank" rel="noopener noreferrer">
+    <img class="visitor-map-image" title="visitor map" src="{{ $mapImage }}" alt="visitor map" />
+  </a>
+  <div class="visitor-map-actions">
+    <button type="button" class="visitor-map-refresh">Refresh map</button>
+    <span class="visitor-map-note">Refreshes the image in your browser. The provider may still update with a delay.</span>
+  </div>
+</div>
+<script>
+  (function () {
+    const widget = document.currentScript.previousElementSibling;
+    if (!widget || !widget.classList.contains('visitor-map-widget')) return;
+    const img = widget.querySelector('.visitor-map-image');
+    const button = widget.querySelector('.visitor-map-refresh');
+    const base = widget.dataset.mapBase;
+    if (!img || !button || !base) return;
+
+    const refreshMap = () => {
+      const separator = base.includes('?') ? '&' : '?';
+      img.src = `${base}${separator}t=${Date.now()}`;
+    };
+
+    button.addEventListener('click', refreshMap);
+    refreshMap();
+  })();
+</script>
