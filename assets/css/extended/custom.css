@@ -95,6 +95,10 @@ body {
     line-height: 1.64;
 }
 
+.profile .profile_inner > span p:first-child {
+    margin-bottom: 18px;
+}
+
 .profile img {
     grid-area: photo;
     width: 172px;
