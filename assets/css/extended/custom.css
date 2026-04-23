@@ -67,10 +67,9 @@ body {
     grid-template-columns: 188px minmax(0, 1fr);
     grid-template-areas:
         "photo title"
-        "photo subtitle"
-        "photo social"
-        "photo buttons"
-        "extra extra";
+        "extra subtitle"
+        "extra social"
+        "extra buttons";
     column-gap: 30px;
     row-gap: 12px;
     padding: 34px;
@@ -128,10 +127,10 @@ body {
 
 .profile-home-extra {
     grid-area: extra;
-    margin-top: 14px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(32, 52, 76, 0.10);
+    margin-top: 0;
+    padding-top: 0;
     line-height: 1.68;
+    align-self: start;
 }
 
 .profile-home-extra h2 {
@@ -236,10 +235,12 @@ body {
 }
 
 .visitor-map-widget {
-    margin: 14px 0 8px;
+    margin: 0;
 }
 
 .visitor-map-widget--mapmyvisitors {
+    width: 172px;
+    max-width: 172px;
     min-height: 190px;
 }
 
@@ -266,8 +267,8 @@ body {
     }
 
     .profile-home-extra {
-        margin-top: 10px;
-        padding-top: 14px;
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .profile img {
