@@ -5,7 +5,7 @@ summary: "A working paper on learning-based dual-optimal inequalities for stabil
 tags: ["working paper", "column generation", "learning-augmented optimization"]
 ---
 
-Working paper with Haoran Liu and Bo Tang.
+Working paper with Bo Tang and Haoran Liu.
 
 Accepted for presentation at the 2026 Transportation Science & Logistics Conference.
 
