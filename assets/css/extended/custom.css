@@ -262,16 +262,72 @@ body {
 }
 
 .profile-visitor-map {
+    position: relative;
     width: 100%;
     overflow: hidden;
-    background: transparent;
-    border: 1px solid #f2f2f2;
-    border-radius: 22px;
-    padding: 8px 10px 4px;
+    background:
+        radial-gradient(circle at 18% 20%, rgba(118, 161, 255, 0.16) 0, rgba(118, 161, 255, 0.02) 18%, transparent 32%),
+        radial-gradient(circle at 82% 16%, rgba(103, 211, 255, 0.10) 0, rgba(103, 211, 255, 0.01) 14%, transparent 28%),
+        radial-gradient(circle at 50% 120%, rgba(27, 53, 94, 0.28) 0, rgba(8, 14, 28, 0.94) 45%, #05070d 100%);
+    border: 1px solid rgba(133, 158, 204, 0.18);
+    border-radius: 24px;
+    padding: 12px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 18px 34px rgba(5, 7, 13, 0.18);
+}
+
+.profile-visitor-map::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-image:
+        radial-gradient(circle at 11% 14%, rgba(255, 255, 255, 0.78) 0 1px, transparent 1.4px),
+        radial-gradient(circle at 28% 32%, rgba(255, 255, 255, 0.50) 0 1px, transparent 1.4px),
+        radial-gradient(circle at 63% 19%, rgba(255, 255, 255, 0.62) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 84% 27%, rgba(255, 255, 255, 0.72) 0 1px, transparent 1.5px),
+        radial-gradient(circle at 76% 72%, rgba(255, 255, 255, 0.44) 0 1px, transparent 1.3px),
+        radial-gradient(circle at 18% 78%, rgba(255, 255, 255, 0.58) 0 1px, transparent 1.4px),
+        radial-gradient(circle at 49% 88%, rgba(255, 255, 255, 0.36) 0 1px, transparent 1.2px);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.profile-visitor-map > * {
+    position: relative;
+    z-index: 1;
 }
 
 .profile-visitor-map script {
     display: block;
+}
+
+.profile-visitor-map a#mapmyvisitors-widget,
+.profile-visitor-map #mapmyvisitors-widget {
+    width: 100% !important;
+    min-height: auto !important;
+    color: transparent !important;
+}
+
+.profile-visitor-map #mapmyvisitors-widget > .mapmyvisitors-map-container {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(166, 190, 231, 0.14);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.10),
+        0 10px 24px rgba(0, 0, 0, 0.22);
+    background-color: #0b1220 !important;
+}
+
+.profile-visitor-map #mapmyvisitors-widget .mapmyvisitors-map {
+    border-radius: 16px;
+}
+
+.profile-visitor-map #mapmyvisitors-widget .mapmyvisitors-bottom-text,
+.profile-visitor-map #mapmyvisitors-widget .mapmyvisitors-date,
+.profile-visitor-map #mapmyvisitors-widget .mapmyvisitors-visitors {
+    text-shadow: none !important;
 }
 
 .profile .social-icons {
