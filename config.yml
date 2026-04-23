@@ -65,9 +65,9 @@ params:
       I build exact and learning-augmented optimization methods for routing, scheduling, and inventory problems, with an emphasis on branch-price-and-cut, column generation, and research software for large-scale decision systems.
 
       I received an M.S. in Industrial & Systems Engineering from the University of Florida. My work appears in *Operations Research* and *INFORMS Journal on Computing*, and I am an incoming participant in the MIT-UF-NEU Joint Summer Research Camp.
-    imageUrl: "portrait-mark.svg"
-    imageWidth: 220
-    imageHeight: 220
+    imageUrl: "profile-photo.jpeg"
+    imageWidth: 210
+    imageHeight: 210
     buttons:
       - name: Papers
         url: papers/

@@ -12,13 +12,14 @@
     --nav-width: 1100px;
     --main-width: 860px;
     --radius: 18px;
-    --homesize: 17px;
-    --textsize: 18px;
-    --headersize: 16px;
-    --footersize: 12px;
+    --homesize: 15px;
+    --textsize: 16px;
+    --headersize: 15px;
+    --footersize: 11px;
 }
 
 body {
+    font-family: "Times New Roman", Times, Georgia, serif;
     background:
         radial-gradient(circle at 8% 10%, rgba(132, 169, 211, 0.20), transparent 26%),
         radial-gradient(circle at 88% 16%, rgba(215, 190, 142, 0.18), transparent 24%),
@@ -47,7 +48,7 @@ body {
 .post-content h1,
 .post-content h2,
 .post-content h3 {
-    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    font-family: "Times New Roman", Times, Georgia, serif;
     letter-spacing: -0.02em;
 }
 
@@ -58,7 +59,7 @@ body {
 .profile .profile_inner {
     max-width: 760px;
     gap: 14px;
-    padding: 36px;
+    padding: 34px;
     border: 1px solid rgba(32, 52, 76, 0.10);
     border-radius: 28px;
     background: rgba(255, 255, 255, 0.70);
@@ -67,21 +68,22 @@ body {
 }
 
 .profile .profile_inner h1 {
-    font-size: clamp(2.9rem, 8vw, 4.3rem);
-    line-height: 0.96;
+    font-size: clamp(2.5rem, 7vw, 3.7rem);
+    line-height: 0.98;
 }
 
 .profile .profile_inner > span {
     max-width: 62ch;
-    font-size: 1.08rem;
-    line-height: 1.72;
+    font-size: 0.98rem;
+    line-height: 1.64;
 }
 
 .profile img {
-    width: 220px;
-    height: 220px;
-    border-radius: 28px;
-    border: none;
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 1px solid rgba(32, 52, 76, 0.08);
     box-shadow: 0 18px 50px rgba(32, 52, 76, 0.20);
 }
 
@@ -105,6 +107,7 @@ body {
 .button,
 .button .button-inner {
     color: #f7f9fb;
+    font-size: 0.92rem;
 }
 
 .button:hover {
@@ -144,7 +147,7 @@ body {
 
 .post-content,
 .post-single {
-    line-height: 1.8;
+    line-height: 1.68;
 }
 
 .archive-year + .archive-year {
@@ -166,8 +169,8 @@ body {
     }
 
     .profile img {
-        width: 180px;
-        height: 180px;
+        width: 176px;
+        height: 176px;
         border-radius: 24px;
     }
 
