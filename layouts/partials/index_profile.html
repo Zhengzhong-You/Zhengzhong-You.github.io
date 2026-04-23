@@ -34,14 +34,14 @@
             {{- partial "social_icons.html" -}}
             <div class="profile-cat-stack" id="home-cat-stack" data-counter-api="{{ site.Params.petCounterApi | default "" }}">
                 <div class="profile-cat-image-wrap">
-                    <img id="home-cat-image" class="profile-cat-image" draggable="false" src="{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}"
-                        alt="Maomao is waiting for your first pet" title="Maomao is waiting for your first pet" />
+                    <img id="home-cat-image" class="profile-cat-image" draggable="false" src="{{ "maomao-mainbg/curious_tabby_cat_close_up_cutout.png" | absURL }}"
+                        alt="Maomao leaned in much closer. Give her another pet." title="Maomao leaned in much closer. Give her another pet." />
                 </div>
                 <p class="profile-cat-count"><span id="home-pet-count">0</span> pets</p>
-                <p id="home-pet-status" class="profile-cat-status">Maomao is waiting
-right here for
-your first
-gentle pet.</p>
+                <p id="home-pet-status" class="profile-cat-status">Maomao leaned
+in much closer.
+Give her
+another pet.</p>
                 <button id="home-pet-button" class="profile-cat-button" type="button" aria-label="Pet Maomao" title="Pet Maomao">
                     <img class="profile-cat-button-icon" src="{{ "paw-icon.svg" | absURL }}" alt="" aria-hidden="true" />
                 </button>
@@ -89,7 +89,6 @@ gentle pet.</p>
     <script>
     (async () => {
       const countKey = 'maomao-pet-count';
-      const photoKey = 'maomao-pet-photo-index';
       const catStack = document.getElementById('home-cat-stack');
       const remoteCounterApi = (catStack?.dataset?.counterApi || '').trim().replace(/\/+$/, '');
       const remoteRefreshMs = 10000;
@@ -128,12 +127,6 @@ gentle pet.</p>
         return Number.isFinite(n) && n >= 0 ? n : 0;
       };
 
-      const readPhotoIndex = () => {
-        const raw = window.localStorage.getItem(photoKey);
-        const n = Number.parseInt(raw || '-1', 10);
-        return Number.isFinite(n) ? n : -1;
-      };
-
       const writeLocalCount = (n) => {
         window.localStorage.setItem(countKey, String(n));
         countEl.textContent = String(n);
@@ -168,12 +161,8 @@ gentle pet.</p>
         countEl.textContent = String(n);
       };
 
-      const writePhotoIndex = (n) => {
-        window.localStorage.setItem(photoKey, String(n));
-      };
-
       const buildStatus = (state, count) => {
-        if (count <= 0) return 'Maomao is waiting\nright here for\nyour first\ngentle pet.';
+        if (count <= 0) return 'Maomao leaned\nin much closer.\nGive her\nanother pet.';
         return state.lines.join('\n');
       };
 
@@ -224,11 +213,9 @@ gentle pet.</p>
           console.warn('Falling back to browser-local Maomao counter.', error);
         }
       }
-      const currentIndex = readPhotoIndex();
-      const initialIndex = currentIndex >= 0 && currentIndex < gallery.length ? currentIndex : 0;
+      const initialIndex = 1;
       activeIndex = initialIndex;
       syncDisplayedCount(count);
-      if (currentIndex < 0) writePhotoIndex(initialIndex);
       applyState(gallery[initialIndex], count);
 
       if (sharedCounterRequired) {

@@ -113,7 +113,7 @@ params:
     hiddenInList: false
     hiddenInSingle: true
   label:
-    text: Ricky Zhengzhong You
+    text: Ricky
     icon: maomao-cutout.png
     iconHeight: 26
   footer:
