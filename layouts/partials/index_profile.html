@@ -57,6 +57,13 @@
             {{- end }}
         </div>
         {{- end }}
+        {{- if $.Content }}
+        <div class="profile-home-extra">
+            {{- if not ($.Param "disableAnchoredHeadings") }}
+            {{- partial "anchored_headings.html" $.Content -}}
+            {{- else }}{{ $.Content }}{{ end }}
+        </div>
+        {{- end }}
     </div>
     {{- end}}
 </div>
