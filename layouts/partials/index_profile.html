@@ -83,6 +83,11 @@
       const photoKey = 'maomao-pet-photo-index';
       const remoteCounterApi = ({{ site.Params.petCounterApi | default "" | jsonify }} || '').trim().replace(/\/+$/, '');
       const remoteRefreshMs = 10000;
+      const sharedCounterOrigins = new Set([
+        'https://zhengzhong-you.github.io',
+        'http://localhost:1313',
+        'http://127.0.0.1:1313'
+      ]);
       const countEl = document.getElementById('home-pet-count');
       const btn = document.getElementById('home-pet-button');
       const status = document.getElementById('home-pet-status');
@@ -90,6 +95,7 @@
       if (!countEl || !btn || !status || !image) return;
       let activeIndex = 0;
       let remoteCounterEnabled = false;
+      const sharedCounterRequired = Boolean(remoteCounterApi) && sharedCounterOrigins.has(window.location.origin);
 
       const gallery = [
         { src: '{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}', action: 'Maomao loafed neatly' },
@@ -204,8 +210,19 @@
         return next;
       };
 
-      let count = readLocalCount();
-      if (remoteCounterApi) {
+      let count = sharedCounterRequired ? 0 : readLocalCount();
+      if (sharedCounterRequired) {
+        try {
+          count = await refreshRemoteCount();
+        } catch (error) {
+          console.warn('Shared Maomao counter is unavailable.', error);
+          countEl.textContent = '—';
+          status.textContent = 'Maomao is waiting for the shared counter to reconnect.';
+          btn.disabled = true;
+          btn.setAttribute('aria-busy', 'true');
+          return;
+        }
+      } else if (remoteCounterApi) {
         try {
           count = await refreshRemoteCount();
         } catch (error) {
@@ -219,7 +236,7 @@
       if (currentIndex < 0) writePhotoIndex(initialIndex);
       applyState(gallery[initialIndex], count);
 
-      if (remoteCounterApi) {
+      if (sharedCounterRequired) {
         window.setInterval(async () => {
           try {
             await refreshRemoteCount();
@@ -242,7 +259,23 @@
         let next = readLocalCount() + 1;
         btn.disabled = true;
         btn.setAttribute('aria-busy', 'true');
-        if (remoteCounterEnabled) {
+        if (sharedCounterRequired) {
+          try {
+            next = await incrementRemoteCount();
+            window.localStorage.setItem(countKey, String(next));
+            syncDisplayedCount(next);
+          } catch (error) {
+            console.warn('Remote Maomao counter increment failed. Refreshing shared count.', error);
+            try {
+              next = await refreshRemoteCount();
+            } catch (refreshError) {
+              console.warn('Shared Maomao counter refresh failed after increment error.', refreshError);
+              btn.disabled = false;
+              btn.removeAttribute('aria-busy');
+              return;
+            }
+          }
+        } else if (remoteCounterEnabled) {
           try {
             next = await incrementRemoteCount();
             window.localStorage.setItem(countKey, String(next));

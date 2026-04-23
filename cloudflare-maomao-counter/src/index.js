@@ -20,9 +20,10 @@ function json(data, { status = 200, headers = {} } = {}) {
   });
 }
 
-function resolveAllowedOrigin(request, configuredOrigin) {
+function resolveAllowedOrigin(request, configuredOrigin, extraOrigins = []) {
   const requestOrigin = request.headers.get("Origin");
-  if (requestOrigin && requestOrigin === configuredOrigin) return requestOrigin;
+  const allowedOrigins = new Set([configuredOrigin, ...extraOrigins].filter(Boolean));
+  if (requestOrigin && allowedOrigins.has(requestOrigin)) return requestOrigin;
   return configuredOrigin;
 }
 
@@ -61,7 +62,10 @@ export class PetCounter extends DurableObject {
 
 export default {
   async fetch(request, env) {
-    const origin = resolveAllowedOrigin(request, env.ALLOWED_ORIGIN);
+    const origin = resolveAllowedOrigin(request, env.ALLOWED_ORIGIN, [
+      "http://localhost:1313",
+      "http://127.0.0.1:1313",
+    ]);
 
     if (request.method === "OPTIONS") {
       return new Response(null, {
@@ -112,4 +116,3 @@ export default {
     });
   },
 };
-
