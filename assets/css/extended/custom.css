@@ -239,48 +239,17 @@ body {
     margin: 14px 0 8px;
 }
 
-.visitor-map-widget a,
-.visitor-map-widget img {
-    display: inline-block;
+.visitor-map-widget--mapmyvisitors {
+    min-height: 190px;
 }
 
-.visitor-map-widget img {
+.visitor-map-widget--mapmyvisitors iframe,
+.visitor-map-widget--mapmyvisitors canvas,
+.visitor-map-widget--mapmyvisitors img,
+.visitor-map-widget--mapmyvisitors svg,
+.visitor-map-widget--mapmyvisitors > div {
     max-width: 100%;
-    width: 320px;
     border-radius: 14px;
-    border: 1px solid rgba(32, 52, 76, 0.12);
-    box-shadow: 0 10px 28px rgba(31, 40, 51, 0.08);
-}
-
-.visitor-map-actions {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 14px;
-    align-items: center;
-}
-
-.visitor-map-refresh {
-    border: 1px solid rgba(32, 52, 76, 0.14);
-    border-radius: 999px;
-    background: #ffffff;
-    color: var(--darkcolor);
-    padding: 7px 14px;
-    font: inherit;
-    font-size: 0.92rem;
-    cursor: pointer;
-    transition: background 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
-}
-
-.visitor-map-refresh:hover {
-    background: #f5f8fb;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(31, 40, 51, 0.08);
-}
-
-.visitor-map-note {
-    font-size: 0.87rem;
-    color: var(--secondary);
 }
 
 .footer {
