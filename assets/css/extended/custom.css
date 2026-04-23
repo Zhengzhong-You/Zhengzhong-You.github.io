@@ -190,6 +190,7 @@ body {
     align-self: start;
     justify-self: end;
     width: 172px;
+    min-height: 172px;
     padding-top: 2px;
     text-decoration: none;
     align-items: center;
@@ -212,11 +213,13 @@ body {
     width: 172px;
     height: 172px;
     object-fit: contain;
-    object-position: 50% 50%;
+    object-position: center center;
+    display: block;
     border-radius: 0;
     border: none;
     box-shadow: none;
     background: transparent;
+    transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
 .profile-cat-stack:hover .profile-cat-image {

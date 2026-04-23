@@ -36,11 +36,11 @@
             </div>
         </div>
         <div class="profile-cat-stack">
-            <img class="profile-cat-image" draggable="false" src="{{ "maomao-cutout.png" | absURL }}" alt="maomao" title="maomao"
-                height="172" width="172" />
+            <img id="home-cat-image" class="profile-cat-image" draggable="false" src="{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}"
+                alt="Maomao is waiting for your first pet" title="Maomao is waiting for your first pet" />
             <p class="profile-cat-count"><span id="home-pet-count">0</span> pets.</p>
             <button id="home-pet-button" class="profile-cat-button" type="button">Pet Maomao</button>
-            <p id="home-pet-status" class="profile-cat-status">Maomao is waiting.</p>
+            <p id="home-pet-status" class="profile-cat-status">Maomao is waiting for your first pet.</p>
         </div>
         <h1>{{ .title | default site.Title | markdownify }}</h1>
         <span>{{ .subtitle | markdownify }}</span>
@@ -79,38 +79,104 @@
     </div>
     <script>
     (() => {
-      const key = 'maomao-pet-count';
+      const countKey = 'maomao-pet-count';
+      const photoKey = 'maomao-pet-photo-index';
       const countEl = document.getElementById('home-pet-count');
       const btn = document.getElementById('home-pet-button');
       const status = document.getElementById('home-pet-status');
-      const image = document.querySelector('.profile-cat-image');
+      const image = document.getElementById('home-cat-image');
       if (!countEl || !btn || !status || !image) return;
 
+      const gallery = [
+        { src: '{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}', action: 'Maomao loafed neatly' },
+        { src: '{{ "maomao-mainbg/cat_grooming_in_relaxed_pose.png" | absURL }}', action: 'Maomao is grooming herself' },
+        { src: '{{ "maomao-mainbg/curious_tabby_cat_close_up_cutout.png" | absURL }}', action: 'Maomao leaned in closer' },
+        { src: '{{ "maomao-mainbg/curious_tabby_cat_portrait_on_transparency.png" | absURL }}', action: 'Maomao is posing sweetly' },
+        { src: '{{ "maomao-mainbg/curled_tabby_cat_resting_peacefully.png" | absURL }}', action: 'Maomao curled into a tidy ball' },
+        { src: '{{ "maomao-mainbg/relaxed_cat_on_transparent_background.png" | absURL }}', action: 'Maomao is relaxing on duty' },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_close_up_portrait.png" | absURL }}', action: 'Maomao is staring softly at you' },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_cutout_design.png" | absURL }}', action: 'Maomao settled in comfortably' },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_in_a_loaf_pose.png" | absURL }}', action: 'Maomao tucked in her paws again' },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_in_profile.png" | absURL }}', action: 'Maomao turned sideways to listen' },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_portrait.png" | absURL }}', action: 'Maomao looks very pleased' },
+        { src: '{{ "maomao-mainbg/serene_tabby_cat_in_repose.png" | absURL }}', action: 'Maomao is resting serenely' },
+        { src: '{{ "maomao-mainbg/sleepy_tabby_cat_lounging_peacefully.png" | absURL }}', action: 'Maomao is getting sleepy' },
+        { src: '{{ "maomao-mainbg/tabby_cat_head_cutout_on_transparency.png" | absURL }}', action: 'Maomao peeked in with just her head' },
+        { src: '{{ "maomao-mainbg/tabby_cat_with_collar_on_transparent_background.png" | absURL }}', action: 'Maomao showed up looking extra polite' }
+      ];
+
+      const promptsByCount = [
+        'She is waiting for your first pet.',
+        'She liked that. Try one more.',
+        'She is clearly interested now.',
+        'She is warming up to you.',
+        'She expects another pet already.',
+        'She has decided this is a good arrangement.',
+        'She looks very happy with your service.',
+        'She is fully engaged. Keep going.',
+        'She seems ready for even more attention.'
+      ];
+
       const readCount = () => {
-        const raw = window.localStorage.getItem(key);
+        const raw = window.localStorage.getItem(countKey);
         const n = Number.parseInt(raw || '0', 10);
         return Number.isFinite(n) && n >= 0 ? n : 0;
       };
 
-      const write = (n) => {
-        window.localStorage.setItem(key, String(n));
+      const readPhotoIndex = () => {
+        const raw = window.localStorage.getItem(photoKey);
+        const n = Number.parseInt(raw || '-1', 10);
+        return Number.isFinite(n) ? n : -1;
+      };
+
+      const writeCount = (n) => {
+        window.localStorage.setItem(countKey, String(n));
         countEl.textContent = String(n);
       };
 
-      const messages = [
-        'Maomao approves.',
-        'Maomao is purring.',
-        'Another pet recorded.',
-        'Maomao looks pleased.',
-        'Good choice.'
-      ];
+      const writePhotoIndex = (n) => {
+        window.localStorage.setItem(photoKey, String(n));
+      };
 
-      write(readCount());
+      const buildStatus = (state, count) => {
+        if (count <= 0) return 'Maomao is waiting for your first pet.';
+        const bucket = Math.min(count, promptsByCount.length - 1);
+        return `${state.action}. ${promptsByCount[bucket]}`;
+      };
+
+      const applyState = (state, count) => {
+        const message = buildStatus(state, count);
+        image.src = state.src;
+        image.alt = message;
+        image.title = message;
+        status.textContent = message;
+      };
+
+      const chooseNextIndex = (currentIndex) => {
+        if (!gallery.length) return -1;
+        if (gallery.length === 1) return 0;
+        let next = currentIndex;
+        while (next === currentIndex) {
+          next = Math.floor(Math.random() * gallery.length);
+        }
+        return next;
+      };
+
+      const count = readCount();
+      const currentIndex = readPhotoIndex();
+      const initialIndex = currentIndex >= 0 && currentIndex < gallery.length ? currentIndex : 0;
+      writeCount(count);
+      if (currentIndex < 0) writePhotoIndex(initialIndex);
+      applyState(gallery[initialIndex], count);
 
       btn.addEventListener('click', () => {
         const next = readCount() + 1;
-        write(next);
-        status.textContent = messages[next % messages.length];
+        const nextIndex = chooseNextIndex(readPhotoIndex());
+        writeCount(next);
+        if (nextIndex >= 0) {
+          writePhotoIndex(nextIndex);
+          applyState(gallery[nextIndex], next);
+        }
         image.classList.remove('is-petted');
         void image.offsetWidth;
         image.classList.add('is-petted');
