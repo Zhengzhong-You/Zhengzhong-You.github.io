@@ -15,68 +15,73 @@
                     {{- end -}}
                     {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
                     {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                        {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
-                            {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+                        {{- if .imageWidth }}
+                            {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
                         {{- else if .imageHeight }}
                             {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
-                        {{ else if .imageWidth }}
-                            {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
                         {{ else }}
-                            {{- $img = $img.Resize "150x150" }}
+                            {{- $img = $img.Resize "150x" }}
                         {{- end }}
                     {{- end }}
-                    <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                        height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+                    <img class="profile-portrait" draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                        width="{{ .imageWidth | default 150 }}" />
                 {{- else }}
-                <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                    height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+                <img class="profile-portrait" draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                    width="{{ .imageWidth | default 150 }}" />
                 {{- end }}
                 {{- end }}
             </div>
+            {{- partial "social_icons.html" -}}
             <div class="profile-cat-stack" id="home-cat-stack" data-counter-api="{{ site.Params.petCounterApi | default "" }}">
-                <img id="home-cat-image" class="profile-cat-image" draggable="false" src="{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}"
-                    alt="Maomao is waiting for your first pet" title="Maomao is waiting for your first pet" />
-                <p class="profile-cat-count"><span id="home-pet-count">0</span> pets.</p>
-                <button id="home-pet-button" class="profile-cat-button" type="button">Pet Maomao</button>
+                <div class="profile-cat-image-wrap">
+                    <img id="home-cat-image" class="profile-cat-image" draggable="false" src="{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}"
+                        alt="Maomao is waiting for your first pet" title="Maomao is waiting for your first pet" />
+                </div>
+                <p class="profile-cat-count"><span id="home-pet-count">0</span> pets</p>
                 <p id="home-pet-status" class="profile-cat-status">Maomao is waiting for your first pet.</p>
+                <button id="home-pet-button" class="profile-cat-button" type="button" aria-label="Pet Maomao" title="Pet Maomao">
+                    <img class="profile-cat-button-icon" src="{{ "paw-icon.svg" | absURL }}" alt="" aria-hidden="true" />
+                </button>
             </div>
             <div class="profile-visitor-map">
                 <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=lM9p0zM8NSkJC5-ya0SFQxpSwlLjxScIDgAX_jRs7TY&co=ffffff&cl=8ab07c&ct=93939f&w=a"></script>
             </div>
         </div>
-        <h1>{{ .title | default site.Title | markdownify }}</h1>
-        <span>{{ .subtitle | markdownify }}</span>
-        {{- partial "social_icons.html" -}}
-        {{- with .buttons }}
-        <div class="buttons">
-            {{- range . }}
-            {{- $buttonUrl := trim .url " " }}
-            {{- $is_cv := eq (strings.TrimSuffix "/" $buttonUrl) "cv.pdf" }}
-            {{- $is_external := gt (len (findRE "://" $buttonUrl)) 0 }}
-            <a class="button" href="{{ $buttonUrl }}" rel="noopener" title="{{ .name }}"
-                {{- if or $is_cv $is_external }} target="_blank" rel="noopener noreferrer"{{- end }}>
-                <span class="button-inner">
-                    {{ .name }}
-                    {{- if $is_external }}&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                    {{- end }}
-                </span>
-            </a>
+        <div class="profile-divider" aria-hidden="true"></div>
+        <div class="profile-main-stack">
+            <h1>{{ .title | default site.Title | markdownify }}</h1>
+            <span>{{ .subtitle | markdownify }}</span>
+            {{- with .buttons }}
+            <div class="buttons">
+                {{- range . }}
+                {{- $buttonUrl := trim .url " " }}
+                {{- $is_cv := eq (strings.TrimSuffix "/" $buttonUrl) "cv.pdf" }}
+                {{- $is_external := gt (len (findRE "://" $buttonUrl)) 0 }}
+                <a class="button" href="{{ $buttonUrl }}" rel="noopener" title="{{ .name }}"
+                    {{- if or $is_cv $is_external }} target="_blank" rel="noopener noreferrer"{{- end }}>
+                    <span class="button-inner">
+                        {{ .name }}
+                        {{- if $is_external }}&nbsp;
+                        <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                            <path d="M15 3h6v6"></path>
+                            <path d="M10 14L21 3"></path>
+                        </svg>
+                        {{- end }}
+                    </span>
+                </a>
+                {{- end }}
+            </div>
+            {{- end }}
+            {{- if $.Content }}
+            <div class="profile-home-extra">
+                {{- if not ($.Param "disableAnchoredHeadings") }}
+                {{- partial "anchored_headings.html" $.Content -}}
+                {{- else }}{{ $.Content }}{{ end }}
+            </div>
             {{- end }}
         </div>
-        {{- end }}
-        {{- if $.Content }}
-        <div class="profile-home-extra">
-            {{- if not ($.Param "disableAnchoredHeadings") }}
-            {{- partial "anchored_headings.html" $.Content -}}
-            {{- else }}{{ $.Content }}{{ end }}
-        </div>
-        {{- end }}
     </div>
     <script>
     (async () => {

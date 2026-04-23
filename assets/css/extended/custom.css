@@ -18,10 +18,12 @@
     --textsize: 16px;
     --headersize: 15px;
     --footersize: 11px;
+    --profile-divider-offset: -58px;
 }
 
 body {
     font-family: "Times New Roman", Times, Georgia, serif;
+    /* font-family: 'Inter', 'Noto Sans SC', sans-serif; */
     background: var(--surface-bg);
 }
 
@@ -90,14 +92,10 @@ body {
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(280px, 0.382fr) minmax(0, 0.618fr);
+    grid-template-columns: minmax(280px, 0.382fr) 1px minmax(0, 0.618fr);
     grid-template-areas:
-        "side title"
-        "side subtitle"
-        "side social"
-        "side buttons"
-        "side extra";
-    column-gap: 54px;
+        "side divider main";
+    column-gap: 26px;
     row-gap: 10px;
     padding: 12px 8px 4px;
     border: none;
@@ -119,35 +117,61 @@ body {
     justify-self: center;
 }
 
-.profile .profile_inner h1 {
-    grid-area: title;
+.profile-side-stack > * {
+    margin: 0;
+}
+
+.profile-divider {
+    grid-area: divider;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(17, 18, 21, 0) 0%,
+        rgba(17, 18, 21, 0.11) 12%,
+        rgba(17, 18, 21, 0.11) 88%,
+        rgba(17, 18, 21, 0) 100%
+    );
+    align-self: stretch;
+    justify-self: center;
+    transform: translateX(var(--profile-divider-offset));
+}
+
+.profile-main-stack {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+}
+
+.profile-main-stack h1 {
     font-size: clamp(2.5rem, 7vw, 3.7rem);
     line-height: 0.98;
     margin: 0;
-    align-self: start;
     margin-top: 1px;
 }
 
-.profile .profile_inner > span {
-    grid-area: subtitle;
+.profile-main-stack > span {
     max-width: 72ch;
     font-size: 1rem;
     line-height: 1.66;
     margin-top: -2px;
 }
 
-.profile .profile_inner > span a {
+.profile-main-stack > span a {
     color: var(--darkcolor);
     text-decoration-line: underline;
     text-decoration-thickness: 1.4px;
     text-underline-offset: 2px;
 }
 
-.profile .profile_inner > span a:hover {
+.profile-main-stack > span a:hover {
     text-decoration-thickness: 2px;
 }
 
-.profile .profile_inner > span p:first-child {
+.profile-main-stack > span p:first-child {
     margin-bottom: 18px;
 }
 
@@ -187,6 +211,7 @@ body {
 .profile-photo-stack {
     display: flex;
     width: 172px;
+    justify-content: center;
 }
 
 .profile-cat-stack {
@@ -194,7 +219,7 @@ body {
     flex-direction: column;
     width: 172px;
     min-height: 0;
-    padding-top: 6px;
+    padding-top: 0;
     text-decoration: none;
     align-items: center;
     gap: 10px;
@@ -203,13 +228,22 @@ body {
 .profile img {
     width: 172px;
     height: 172px;
-    object-fit: cover;
+    object-fit: scale-down;
     object-position: 50% 10%;
     border-radius: 22px;
-    border: 1px solid var(--border);
-    box-shadow: 0 8px 26px rgba(17, 18, 21, 0.06);
+    border: none;
+    box-shadow: none;
     align-self: start;
     justify-self: start;
+}
+
+.profile-portrait {
+    width: 172px;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    display: block;
+    border-radius: 0;
 }
 
 .profile-cat-image {
@@ -225,6 +259,12 @@ body {
     transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
+.profile-cat-image-wrap {
+    width: 172px;
+    display: flex;
+    justify-content: center;
+}
+
 .profile-cat-stack:hover .profile-cat-image {
     transform: translateY(-2px);
 }
@@ -234,57 +274,70 @@ body {
     font-size: 1rem;
     line-height: 1.25;
     text-align: center;
+    color: #111215;
 }
 
 .profile-cat-button {
-    border: 1px solid var(--border);
-    border-radius: 999px;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    flex: 0 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0;
     background: transparent;
-    color: var(--primary);
+    color: #111215;
     font-family: "Times New Roman", Times, Georgia, serif;
     font-size: 0.98rem;
-    padding: 9px 18px;
+    padding: 0;
+    line-height: 0;
     cursor: pointer;
     box-shadow: none;
     transition: transform 0.16s ease, color 0.16s ease, border-color 0.16s ease, background 0.16s ease;
 }
 
+.profile-cat-button-icon {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
 .profile-cat-button:hover {
     transform: translateY(-1px);
     color: var(--accent-blue);
-    border-color: rgba(24, 99, 220, 0.22);
-    background: rgba(24, 99, 220, 0.02);
+    background: transparent;
 }
 
 .profile-cat-status {
     margin: 0;
-    color: var(--secondary);
+    color: #111215;
     font-size: 0.95rem;
     line-height: 1.35;
     text-align: center;
+    width: 172px;
+    max-width: 172px;
 }
 
 .profile-visitor-map {
     position: relative;
     width: 172px;
+    margin-top: 20px;
     overflow: hidden;
-    background: linear-gradient(180deg, rgba(233, 243, 249, 0.58) 0%, rgba(255, 255, 255, 0.96) 100%);
-    border: 1px solid rgba(217, 217, 221, 0.95);
-    border-radius: 24px;
-    padding: 12px;
-    box-shadow: 0 10px 28px rgba(17, 18, 21, 0.05);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
 }
 
 .profile-visitor-map::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background:
-        linear-gradient(180deg, rgba(41, 157, 143, 0.05) 0%, rgba(138, 176, 124, 0.02) 40%, transparent 100%),
-        radial-gradient(circle at top, rgba(39, 71, 83, 0.04) 0%, transparent 55%);
-    opacity: 1;
-    pointer-events: none;
+    display: none;
 }
 
 .profile-visitor-map > * {
@@ -304,17 +357,15 @@ body {
 }
 
 .profile-visitor-map #mapmyvisitors-widget > .mapmyvisitors-map-container {
-    border-radius: 18px;
+    border-radius: 0;
     overflow: hidden;
-    border: 1px solid rgba(217, 217, 221, 0.95);
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.84),
-        0 8px 18px rgba(17, 18, 21, 0.04);
+    border: none;
+    box-shadow: none;
     background-color: #ffffff !important;
 }
 
 .profile-visitor-map #mapmyvisitors-widget .mapmyvisitors-map {
-    border-radius: 16px;
+    border-radius: 0;
 }
 
 .profile-visitor-map #mapmyvisitors-widget .mapmyvisitors-bottom-text,
@@ -323,21 +374,46 @@ body {
     text-shadow: none !important;
 }
 
+.profile-visitor-map .leaflet-control-zoom,
+.profile-visitor-map .leaflet-control-layers,
+.profile-visitor-map .leaflet-top.leaflet-left,
+.profile-visitor-map .leaflet-top.leaflet-right {
+    display: none !important;
+}
+
 .social-icons a {
     margin-right: 12px;
     color: var(--darkcolor);
 }
 
-.profile .social-icons {
-    grid-area: social;
+.profile-main-stack .social-icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: 2px;
 }
 
+.profile-side-stack .social-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-top: 0;
+    width: 172px;
+}
+
+.profile-side-stack .social-icons a {
+    margin-right: 0;
+    padding: 6px 2px;
+}
+
+.profile-side-stack .social-icons a svg {
+    width: 20px;
+    height: 20px;
+}
+
 .buttons {
-    grid-area: buttons;
     margin-top: 2px;
     display: flex;
     flex-wrap: wrap;
@@ -597,11 +673,8 @@ body {
         grid-template-columns: 1fr;
         grid-template-areas:
             "side"
-            "title"
-            "subtitle"
-            "social"
-            "buttons"
-            "extra";
+            "divider"
+            "main";
         justify-items: center;
         text-align: center;
     }
@@ -619,6 +692,14 @@ body {
     .profile .social-icons,
     .buttons {
         justify-content: center;
+    }
+
+    .profile-main-stack {
+        align-items: center;
+    }
+
+    .profile-divider {
+        display: none;
     }
 
     .profile-cat-stack {
@@ -661,10 +742,19 @@ body {
         object-position: 50% 12%;
     }
 
+    .profile-portrait {
+        width: 148px;
+        height: auto !important;
+        border-radius: 0;
+    }
+
     .profile-photo-stack,
-    .profile-cat-stack,
     .profile-visitor-map {
         width: 148px;
+    }
+
+    .profile-cat-stack {
+        width: 172px;
     }
 
     .profile-cat-image {
