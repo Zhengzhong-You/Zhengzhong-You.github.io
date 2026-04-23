@@ -1,35 +1,47 @@
 <div class="profile">
     {{- with site.Params.profileMode }}
     <div class="profile_inner">
-        {{- if .imageUrl -}}
-        {{- $img := "" }}
-        {{- if not (urls.Parse .imageUrl).IsAbs }}
-            {{- $img = resources.Get .imageUrl }}
-        {{- end }}
-        {{- if $img }}
-            {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-            {{- if hugo.IsExtended -}}
-                {{- $processableFormats = $processableFormats | append "webp" -}}
-            {{- end -}}
-            {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
-                    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
-                {{- else if .imageHeight }}
-                    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
-                {{ else if .imageWidth }}
-                    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
-                {{ else }}
-                    {{- $img = $img.Resize "150x150" }}
-                {{- end }}
+        <div class="profile-photo-stack">
+            {{- if .imageUrl -}}
+            {{- $img := "" }}
+            {{- if not (urls.Parse .imageUrl).IsAbs }}
+                {{- $img = resources.Get .imageUrl }}
             {{- end }}
-            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+            {{- if $img }}
+                {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+                {{- if hugo.IsExtended -}}
+                    {{- $processableFormats = $processableFormats | append "webp" -}}
+                {{- end -}}
+                {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+                {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                    {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+                        {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+                    {{- else if .imageHeight }}
+                        {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
+                    {{ else if .imageWidth }}
+                        {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
+                    {{ else }}
+                        {{- $img = $img.Resize "150x150" }}
+                    {{- end }}
+                {{- end }}
+                <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+                    height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+            {{- else }}
+            <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
                 height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-        {{- else }}
-        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-        {{- end }}
-        {{- end }}
+            {{- end }}
+            {{- end }}
+            <div class="profile-visitor-map">
+                <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=lM9p0zM8NSkJC5-ya0SFQxpSwlLjxScIDgAX_jRs7TY&cl=ffffff&w=a"></script>
+            </div>
+        </div>
+        <div class="profile-cat-stack">
+            <img class="profile-cat-image" draggable="false" src="{{ "maomao-cutout.png" | absURL }}" alt="maomao" title="maomao"
+                height="172" width="172" />
+            <p class="profile-cat-count"><span id="home-pet-count">0</span> pets.</p>
+            <button id="home-pet-button" class="profile-cat-button" type="button">Pet Maomao</button>
+            <p id="home-pet-status" class="profile-cat-status">Maomao is waiting.</p>
+        </div>
         <h1>{{ .title | default site.Title | markdownify }}</h1>
         <span>{{ .subtitle | markdownify }}</span>
         {{- partial "social_icons.html" -}}
@@ -65,5 +77,45 @@
         </div>
         {{- end }}
     </div>
+    <script>
+    (() => {
+      const key = 'maomao-pet-count';
+      const countEl = document.getElementById('home-pet-count');
+      const btn = document.getElementById('home-pet-button');
+      const status = document.getElementById('home-pet-status');
+      const image = document.querySelector('.profile-cat-image');
+      if (!countEl || !btn || !status || !image) return;
+
+      const readCount = () => {
+        const raw = window.localStorage.getItem(key);
+        const n = Number.parseInt(raw || '0', 10);
+        return Number.isFinite(n) && n >= 0 ? n : 0;
+      };
+
+      const write = (n) => {
+        window.localStorage.setItem(key, String(n));
+        countEl.textContent = String(n);
+      };
+
+      const messages = [
+        'Maomao approves.',
+        'Maomao is purring.',
+        'Another pet recorded.',
+        'Maomao looks pleased.',
+        'Good choice.'
+      ];
+
+      write(readCount());
+
+      btn.addEventListener('click', () => {
+        const next = readCount() + 1;
+        write(next);
+        status.textContent = messages[next % messages.length];
+        image.classList.remove('is-petted');
+        void image.offsetWidth;
+        image.classList.add('is-petted');
+      });
+    })();
+    </script>
     {{- end}}
 </div>

@@ -11,4 +11,4 @@ RouteOpt is a public modular exact solver for vehicle routing problems written f
 - Documentation: [RouteOpt Docs](https://zhengzhong-you.github.io/RouteOpt-Docs/)
 - Article: [INFORMS Journal on Computing](https://pubsonline.informs.org/doi/10.1287/ijoc.2025.1415)
 
-The codebase is centered on branch-price-and-cut, parallel pricing, customizable solver components, and learning-augmented branching. It is designed to support exact optimization research while remaining usable by other researchers who need a transparent and extensible solver.
+The codebase is centered on branch-price-and-cut, customizable solver components, and learning-augmented branching. It is designed to support exact optimization research while remaining usable by other researchers who need a transparent and extensible solver.

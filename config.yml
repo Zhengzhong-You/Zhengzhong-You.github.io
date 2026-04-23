@@ -24,15 +24,6 @@ menu:
     - name: News
       url: news/
       weight: 5
-    - name: Education
-      url: education/
-      weight: 6
-    - name: Collaboration
-      url: collaboration/
-      weight: 7
-    - name: Contact
-      url: contact/
-      weight: 8
 
 params:
   description: "Personal website of Ricky Zhengzhong You, an operations research researcher working on exact and learning-augmented optimization for routing, scheduling, and inventory systems."
@@ -83,6 +74,8 @@ params:
         url: software/
       - name: Talks
         url: talks/
+      - name: News
+        url: news/
       - name: RouteOpt
         url: https://github.com/Zhengzhong-You/RouteOpt
 
@@ -102,6 +95,9 @@ params:
     - name: orcid
       url: https://orcid.org/0009-0007-3480-5578
       title: ORCID
+    - name: googlescholar
+      url: https://scholar.google.com/citations?user=gV1y-SIAAAAJ&hl=en&oi=ao
+      title: Google Scholar
 
   assets:
     disableScrollBarStyle: true
