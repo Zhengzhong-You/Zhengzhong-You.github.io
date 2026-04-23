@@ -39,8 +39,9 @@
                 </div>
                 <p class="profile-cat-count"><span id="home-pet-count">0</span> pets</p>
                 <p id="home-pet-status" class="profile-cat-status">Maomao is waiting
-for your very
-first pet.</p>
+right here for
+your first
+gentle pet.</p>
                 <button id="home-pet-button" class="profile-cat-button" type="button" aria-label="Pet Maomao" title="Pet Maomao">
                     <img class="profile-cat-button-icon" src="{{ "paw-icon.svg" | absURL }}" alt="" aria-hidden="true" />
                 </button>
@@ -107,18 +108,18 @@ first pet.</p>
       const sharedCounterRequired = Boolean(remoteCounterApi) && sharedCounterOrigins.has(window.location.origin);
 
       const gallery = [
-        { src: '{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}', lines: ['Maomao loafed', 'neatly for you.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/curious_tabby_cat_close_up_cutout.png" | absURL }}', lines: ['Maomao leaned', 'in much closer.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/curled_tabby_cat_resting_peacefully.png" | absURL }}', lines: ['Maomao curled', 'into a tidy ball.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/relaxed_cat_on_transparent_background.png" | absURL }}', lines: ['Maomao is relaxing', 'quietly on duty.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_close_up_portrait.png" | absURL }}', lines: ['Maomao is staring', 'softly at you.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_cutout_design.png" | absURL }}', lines: ['Maomao settled', 'in comfortably.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_in_profile.png" | absURL }}', lines: ['Maomao turned', 'sideways to listen.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_portrait.png" | absURL }}', lines: ['Maomao looks', 'very pleased.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/serene_tabby_cat_in_repose.png" | absURL }}', lines: ['Maomao is resting', 'serenely now.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/sleepy_tabby_cat_lounging_peacefully.png" | absURL }}', lines: ['Maomao is getting', 'a little sleepy.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/tabby_cat_head_cutout_on_transparency.png" | absURL }}', lines: ['Maomao peeked in', 'with her head.', 'Pet her again.'] },
-        { src: '{{ "maomao-mainbg/tabby_cat_with_collar_on_transparent_background.png" | absURL }}', lines: ['Maomao showed up', 'looking polite.', 'Pet her again.'] }
+        { src: '{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}', lines: ['Maomao loafed', 'neatly for you.', 'Tap her paw', 'one more time.'] },
+        { src: '{{ "maomao-mainbg/curious_tabby_cat_close_up_cutout.png" | absURL }}', lines: ['Maomao leaned', 'in much closer.', 'Give her', 'another pet.'] },
+        { src: '{{ "maomao-mainbg/curled_tabby_cat_resting_peacefully.png" | absURL }}', lines: ['Maomao curled', 'into a ball.', 'Coax her', 'back again.'] },
+        { src: '{{ "maomao-mainbg/relaxed_cat_on_transparent_background.png" | absURL }}', lines: ['Maomao is relaxing', 'on soft duty.', 'See if she', 'wants more.'] },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_close_up_portrait.png" | absURL }}', lines: ['Maomao is staring', 'softly at you.', 'Reward that', 'look again.'] },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_cutout_design.png" | absURL }}', lines: ['Maomao settled', 'in nicely now.', 'Try one more', 'gentle pet.'] },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_in_profile.png" | absURL }}', lines: ['Maomao turned', 'aside to listen.', 'Call her', 'back gently.'] },
+        { src: '{{ "maomao-mainbg/relaxed_tabby_cat_portrait.png" | absURL }}', lines: ['Maomao looks', 'very pleased.', 'Keep that', 'going now.'] },
+        { src: '{{ "maomao-mainbg/serene_tabby_cat_in_repose.png" | absURL }}', lines: ['Maomao is resting', 'serenely now.', 'Wake her with', 'a pet maybe.'] },
+        { src: '{{ "maomao-mainbg/sleepy_tabby_cat_lounging_peacefully.png" | absURL }}', lines: ['Maomao is getting', 'a bit sleepy.', 'Pet her before', 'she naps.'] },
+        { src: '{{ "maomao-mainbg/tabby_cat_head_cutout_on_transparency.png" | absURL }}', lines: ['Maomao peeked in', 'with her head.', 'Say hello', 'with a pet.'] },
+        { src: '{{ "maomao-mainbg/tabby_cat_with_collar_on_transparent_background.png" | absURL }}', lines: ['Maomao showed up', 'looking polite.', 'Please return', 'the favor.'] }
       ];
 
       const readLocalCount = () => {
@@ -172,7 +173,7 @@ first pet.</p>
       };
 
       const buildStatus = (state, count) => {
-        if (count <= 0) return 'Maomao is waiting\nfor your very\nfirst pet.';
+        if (count <= 0) return 'Maomao is waiting\nright here for\nyour first\ngentle pet.';
         return state.lines.join('\n');
       };
 
@@ -211,7 +212,7 @@ first pet.</p>
         } catch (error) {
           console.warn('Shared Maomao counter is unavailable.', error);
           countEl.textContent = '—';
-          status.textContent = 'Maomao is waiting\nfor the shared\ncounter again.';
+          status.textContent = 'Maomao is waiting\nfor the shared\ncounter to wake\nup again.';
           btn.disabled = true;
           btn.setAttribute('aria-busy', 'true');
           return;
