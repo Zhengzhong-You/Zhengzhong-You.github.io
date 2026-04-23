@@ -64,7 +64,7 @@ params:
       I am an operations research researcher working on exact and learning-augmented optimization for large-scale routing, scheduling, and inventory problems. My work combines branch-price-and-cut, column generation, dynamic programming, and solver engineering, with an emphasis on building transparent and reusable decision-support tools.
 
       I received an M.S. in Industrial & Systems Engineering from the University of Florida. I developed [RouteOpt](https://github.com/Zhengzhong-You/RouteOpt), an open-source exact solver for vehicle routing problems, and I am interested in bridging optimization theory, software implementation, and practical operational impact in logistics and related service systems.
-    imageUrl: "profile-photo.jpeg"
+    imageUrl: "profile-photo-white-bg.png"
     imageWidth: 172
     imageHeight: 172
     buttons:
