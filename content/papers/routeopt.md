@@ -4,6 +4,8 @@ date = 2026-04-04
 author = ["Ricky Zhengzhong You", "Yu Yang"]
 summary = "Despite significant advancements in exact methods for vehicle routing problems (VRPs) over the past three decades, there remains a lack of high-performing and accessible open-source solvers for researchers and practitioners. To bridge this gap, we introduce RouteOpt, the first open-source modular exact solver for VRPs, delivering state-of-the-art performance while maintaining a flexible and extensible structure. RouteOpt achieves the best performance reported in the literature on both the capacitated vehicle routing problem (CVRP) and vehicle routing problem with time windows (VRPTW)."
 tags = ["vehicle routing", "open-source exact solver", "modular design"]
+listFigure = "/publication-figures/routeopt-classdiagram.png"
+listFigureAlt = "Simplified RouteOpt class diagram"
 +++
 
 Article accepted by *INFORMS Journal on Computing*.
