@@ -93,7 +93,7 @@ params:
       url: cv.pdf
       title: CV
     - name: email
-      url: mailto:youzhengzhong0@gmail.com
+      url: mailto:ricky.you.or@gmail.com
       title: Email
     - name: github
       url: https://github.com/Zhengzhong-You
