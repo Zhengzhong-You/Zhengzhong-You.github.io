@@ -244,13 +244,25 @@ body {
     min-height: 190px;
 }
 
+.visitor-map-widget--mapmyvisitors #mapmyvisitors-widget,
+.visitor-map-widget--mapmyvisitors .mapmyvisitors-map-container,
+.visitor-map-widget--mapmyvisitors .mapmyvisitors-map {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.visitor-map-widget--mapmyvisitors .mapmyvisitors-map-container {
+    background-color: transparent !important;
+}
+
 .visitor-map-widget--mapmyvisitors iframe,
 .visitor-map-widget--mapmyvisitors canvas,
 .visitor-map-widget--mapmyvisitors img,
 .visitor-map-widget--mapmyvisitors svg,
 .visitor-map-widget--mapmyvisitors > div {
     max-width: 100%;
-    border-radius: 14px;
+    border-radius: 0 !important;
 }
 
 .footer {
