@@ -16,8 +16,14 @@
       {{- end }}
     </h1>
     {{- if not (.Param "hideMeta") }}
-    <div class="post-meta">
-      {{- partial "post_meta.html" . -}}
+    <div class="post-meta paper-post-meta">
+      <span class="publication-meta-text">
+        {{- .Date | time.Format "January 2006" -}}
+        {{- with .Params.author }}&nbsp;•&nbsp;{{ delimit . ", " }}{{ end -}}
+      </span>
+      {{- with .Params.journal }}
+      <span class="publication-journal-badge">{{ . }}</span>
+      {{- end }}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}

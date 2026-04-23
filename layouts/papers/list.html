@@ -42,8 +42,14 @@
       </div>
       {{- end }}
       {{- if not (.Param "hideMeta") }}
-      <footer class="entry-footer">
-        {{- partial "post_meta.html" . -}}
+      <footer class="entry-footer publication-entry-meta">
+        <span class="publication-meta-text">
+          {{- .Date | time.Format "January 2006" -}}
+          {{- with .Params.author }}&nbsp;•&nbsp;{{ delimit . ", " }}{{ end -}}
+        </span>
+        {{- with .Params.journal }}
+        <span class="publication-journal-badge">{{ . }}</span>
+        {{- end }}
       </footer>
       {{- end }}
     </div>

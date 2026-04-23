@@ -6,6 +6,7 @@ author:
   - "Yu Yang"
   - "Xinshang Wang"
   - "Wotao Yin"
+journal: "Operations Research"
 summary: >-
   Branching is one of the most important components in branch-price-and-cut
   (BPC) algorithms for solving vehicle routing problems (VRPs) exactly.
