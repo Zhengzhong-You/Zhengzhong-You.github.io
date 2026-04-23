@@ -33,12 +33,6 @@ menu:
     - name: Visitor Map
       url: visitor-map/
       weight: 8
-    - name: CV
-      url: cv.pdf
-      weight: 9
-    - name: Archive
-      url: archive/
-      weight: 10
 
 params:
   description: "Personal website of Ricky Zhengzhong You, an operations research researcher working on exact and learning-augmented optimization for routing, scheduling, and inventory systems."
