@@ -25,6 +25,22 @@
         }
     }
 
+    document.querySelectorAll('a[href]').forEach((anchor) => {
+        const href = anchor.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('/')) {
+            return;
+        }
+        if (href.startsWith('http')) {
+            try {
+                const url = new URL(href, window.location.origin);
+                if (url.hostname !== window.location.hostname) {
+                    anchor.setAttribute('target', '_blank');
+                    anchor.setAttribute('rel', 'noopener noreferrer');
+                }
+            } catch (e) {}
+        }
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
