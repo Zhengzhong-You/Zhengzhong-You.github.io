@@ -3,4 +3,4 @@ title: "Talks"
 description: "Selected invited and conference presentations."
 ---
 
-Selected talks and conference presentations are listed below.
+Browse a few talks, invited presentations, and conference appearances from recent years 🎤📍
