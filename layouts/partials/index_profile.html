@@ -35,7 +35,7 @@
                 <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=lM9p0zM8NSkJC5-ya0SFQxpSwlLjxScIDgAX_jRs7TY&cl=ffffff&w=a"></script>
             </div>
         </div>
-        <div class="profile-cat-stack">
+        <div class="profile-cat-stack" id="home-cat-stack" data-counter-api="{{ site.Params.petCounterApi | default "" }}">
             <img id="home-cat-image" class="profile-cat-image" draggable="false" src="{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}"
                 alt="Maomao is waiting for your first pet" title="Maomao is waiting for your first pet" />
             <p class="profile-cat-count"><span id="home-pet-count">0</span> pets.</p>
@@ -81,7 +81,8 @@
     (async () => {
       const countKey = 'maomao-pet-count';
       const photoKey = 'maomao-pet-photo-index';
-      const remoteCounterApi = ({{ site.Params.petCounterApi | default "" | jsonify }} || '').trim().replace(/\/+$/, '');
+      const catStack = document.getElementById('home-cat-stack');
+      const remoteCounterApi = (catStack?.dataset?.counterApi || '').trim().replace(/\/+$/, '');
       const remoteRefreshMs = 10000;
       const sharedCounterOrigins = new Set([
         'https://zhengzhong-you.github.io',
