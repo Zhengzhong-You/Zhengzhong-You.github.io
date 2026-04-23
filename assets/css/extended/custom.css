@@ -221,6 +221,23 @@ body {
     border-radius: 14px;
 }
 
+.visitor-map-widget {
+    margin: 14px 0 8px;
+}
+
+.visitor-map-widget a,
+.visitor-map-widget img {
+    display: inline-block;
+}
+
+.visitor-map-widget img {
+    max-width: 100%;
+    width: 320px;
+    border-radius: 14px;
+    border: 1px solid rgba(32, 52, 76, 0.12);
+    box-shadow: 0 10px 28px rgba(31, 40, 51, 0.08);
+}
+
 .footer {
     color: var(--secondary);
 }

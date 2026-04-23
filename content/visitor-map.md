@@ -1,14 +1,14 @@
 ---
-title: "Home"
-description: "Operations research, exact optimization, and decision-support software."
+title: "Visitor Map"
+description: "A lightweight map showing recent visits to this website."
 ---
 
-## Visitor Map
-
-Come see where recent visitors are viewing the site from 🌍
+Here is a lightweight visitor map for the site 🌍
 
 <div class="visitor-map-widget">
   <a title="free world map tracker" href="https://smallcounter.com/vmap/1776903274/">
     <img title="free world map counter" src="https://smallcounter.com/map/view.php?type=180&id=1776903274" alt="world map hits counter" />
   </a>
 </div>
+
+The widget is provided by SmallCounter's free world map service.

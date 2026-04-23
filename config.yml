@@ -21,18 +21,24 @@ menu:
     - name: Talks
       url: talks/
       weight: 4
+    - name: Education
+      url: education/
+      weight: 5
     - name: Collaboration
       url: collaboration/
-      weight: 5
+      weight: 6
     - name: Contact
       url: contact/
-      weight: 6
+      weight: 7
+    - name: Visitor Map
+      url: visitor-map/
+      weight: 8
     - name: CV
       url: cv.pdf
-      weight: 7
+      weight: 9
     - name: Archive
       url: archive/
-      weight: 8
+      weight: 10
 
 params:
   description: "Personal website of Ricky Zhengzhong You, an operations research researcher working on exact and learning-augmented optimization for routing, scheduling, and inventory systems."
@@ -83,8 +89,6 @@ params:
         url: software/
       - name: Talks
         url: talks/
-      - name: CV
-        url: cv.pdf
       - name: RouteOpt
         url: https://github.com/Zhengzhong-You/RouteOpt
 
