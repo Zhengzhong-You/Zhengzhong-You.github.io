@@ -101,10 +101,10 @@ params:
 
   assets:
     disableScrollBarStyle: true
-    favicon: maomao-logo.png
-    favicon16x16: maomao-logo.png
-    favicon32x32: maomao-logo.png
-    apple_touch_icon: maomao-logo.png
+    favicon: maomao-cutout.png
+    favicon16x16: maomao-cutout.png
+    favicon32x32: maomao-cutout.png
+    apple_touch_icon: maomao-cutout.png
     theme_color: "#20344c"
     msapplication_TileColor: "#20344c"
   cover:
@@ -112,7 +112,7 @@ params:
     hiddenInSingle: true
   label:
     text: Ricky Zhengzhong You
-    icon: maomao-logo.png
+    icon: maomao-cutout.png
     iconHeight: 26
   footer:
     text: "Exact optimization, software, and logistics research."
