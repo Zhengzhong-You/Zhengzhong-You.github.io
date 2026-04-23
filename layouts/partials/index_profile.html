@@ -105,8 +105,7 @@
         { src: '{{ "maomao-mainbg/tabby_cat_with_collar_on_transparent_background.png" | absURL }}', action: 'Maomao showed up looking extra polite' }
       ];
 
-      const promptsByCount = [
-        'She is waiting for your first pet.',
+      const followupPrompts = [
         'She liked that. Try one more.',
         'She is clearly interested now.',
         'She is warming up to you.',
@@ -140,8 +139,8 @@
 
       const buildStatus = (state, count) => {
         if (count <= 0) return 'Maomao is waiting for your first pet.';
-        const bucket = Math.min(count, promptsByCount.length - 1);
-        return `${state.action}. ${promptsByCount[bucket]}`;
+        const bucket = (count - 1) % followupPrompts.length;
+        return `${state.action}. ${followupPrompts[bucket]}`;
       };
 
       const applyState = (state, count) => {
