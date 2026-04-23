@@ -82,11 +82,14 @@
       const countKey = 'maomao-pet-count';
       const photoKey = 'maomao-pet-photo-index';
       const remoteCounterApi = ({{ site.Params.petCounterApi | default "" | jsonify }} || '').trim().replace(/\/+$/, '');
+      const remoteRefreshMs = 10000;
       const countEl = document.getElementById('home-pet-count');
       const btn = document.getElementById('home-pet-button');
       const status = document.getElementById('home-pet-status');
       const image = document.getElementById('home-cat-image');
       if (!countEl || !btn || !status || !image) return;
+      let activeIndex = 0;
+      let remoteCounterEnabled = false;
 
       const gallery = [
         { src: '{{ "maomao-mainbg/calm_tabby_cat_in_loaf_pose.png" | absURL }}', action: 'Maomao loafed neatly' },
@@ -181,6 +184,16 @@
         status.textContent = message;
       };
 
+      const refreshRemoteCount = async () => {
+        if (!remoteCounterApi) return null;
+        const next = await fetchRemoteCount();
+        window.localStorage.setItem(countKey, String(next));
+        syncDisplayedCount(next);
+        applyState(gallery[activeIndex], next);
+        remoteCounterEnabled = true;
+        return next;
+      };
+
       const chooseNextIndex = (currentIndex) => {
         if (!gallery.length) return -1;
         if (gallery.length === 1) return 0;
@@ -194,33 +207,64 @@
       let count = readLocalCount();
       if (remoteCounterApi) {
         try {
-          count = await fetchRemoteCount();
-          window.localStorage.setItem(countKey, String(count));
+          count = await refreshRemoteCount();
         } catch (error) {
           console.warn('Falling back to browser-local Maomao counter.', error);
         }
       }
       const currentIndex = readPhotoIndex();
       const initialIndex = currentIndex >= 0 && currentIndex < gallery.length ? currentIndex : 0;
+      activeIndex = initialIndex;
       syncDisplayedCount(count);
       if (currentIndex < 0) writePhotoIndex(initialIndex);
       applyState(gallery[initialIndex], count);
+
+      if (remoteCounterApi) {
+        window.setInterval(async () => {
+          try {
+            await refreshRemoteCount();
+          } catch (error) {
+            console.warn('Periodic Maomao counter refresh failed.', error);
+          }
+        }, remoteRefreshMs);
+
+        document.addEventListener('visibilitychange', async () => {
+          if (document.visibilityState !== 'visible') return;
+          try {
+            await refreshRemoteCount();
+          } catch (error) {
+            console.warn('Visibility-triggered Maomao counter refresh failed.', error);
+          }
+        });
+      }
 
       btn.addEventListener('click', async () => {
         let next = readLocalCount() + 1;
         btn.disabled = true;
         btn.setAttribute('aria-busy', 'true');
-        if (remoteCounterApi) {
+        if (remoteCounterEnabled) {
           try {
             next = await incrementRemoteCount();
+            window.localStorage.setItem(countKey, String(next));
+            syncDisplayedCount(next);
           } catch (error) {
-            console.warn('Remote Maomao counter failed, using browser-local fallback.', error);
+            console.warn('Remote Maomao counter increment failed. Refreshing shared count.', error);
+            try {
+              next = await refreshRemoteCount();
+            } catch (refreshError) {
+              console.warn('Shared Maomao counter refresh failed after increment error.', refreshError);
+              btn.disabled = false;
+              btn.removeAttribute('aria-busy');
+              return;
+            }
           }
+        } else {
+          writeLocalCount(next);
         }
-        writeLocalCount(next);
         const nextIndex = chooseNextIndex(readPhotoIndex());
         if (nextIndex >= 0) {
           writePhotoIndex(nextIndex);
+          activeIndex = nextIndex;
           applyState(gallery[nextIndex], next);
         }
         image.classList.remove('is-petted');
