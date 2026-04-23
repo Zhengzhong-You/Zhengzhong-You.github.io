@@ -276,9 +276,8 @@ another pet.</p>
         } else {
           writeLocalCount(next);
         }
-        const nextIndex = chooseNextIndex(readPhotoIndex());
+        const nextIndex = chooseNextIndex(activeIndex);
         if (nextIndex >= 0) {
-          writePhotoIndex(nextIndex);
           activeIndex = nextIndex;
           applyState(gallery[nextIndex], next);
         }
