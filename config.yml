@@ -79,7 +79,7 @@ params:
       - name: RouteOpt
         url: https://github.com/Zhengzhong-You/RouteOpt
 
-  petCounterApi: ""
+  petCounterApi: "https://maomao-pet-counter.youzhengzhong0.workers.dev"
 
   socialIcons:
     - name: cv
