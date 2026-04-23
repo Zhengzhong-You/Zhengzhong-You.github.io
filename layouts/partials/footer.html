@@ -30,6 +30,11 @@
         if (!href || href.startsWith('#') || href.startsWith('/')) {
             return;
         }
+        if (href === 'cv.pdf' || href.endsWith('/cv.pdf')) {
+            anchor.setAttribute('target', '_blank');
+            anchor.setAttribute('rel', 'noopener noreferrer');
+            return;
+        }
         if (href.startsWith('http')) {
             try {
                 const url = new URL(href, window.location.origin);
