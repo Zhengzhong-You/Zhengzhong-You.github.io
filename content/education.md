@@ -10,8 +10,3 @@ description: "A short record of my academic training and research preparation."
 
 - **Nankai University**  
   B.S. in Chemistry, 2017--2021
-
-## Research Training
-
-- Incoming participant, **MIT-UF-NEU Joint Summer Research Camp**, 2026  
-  Research focus: large-scale inventory placement under demand uncertainty
