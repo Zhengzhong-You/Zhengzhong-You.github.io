@@ -90,15 +90,15 @@ body {
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 188px minmax(0, 1fr) 188px;
+    grid-template-columns: minmax(280px, 0.382fr) minmax(0, 0.618fr);
     grid-template-areas:
-        "photo title cat"
-        "photo subtitle cat"
-        "photo social cat"
-        "photo buttons cat"
-        "photo extra cat";
-    column-gap: 30px;
-    row-gap: 8px;
+        "side title"
+        "side subtitle"
+        "side social"
+        "side buttons"
+        "side extra";
+    column-gap: 54px;
+    row-gap: 10px;
     padding: 12px 8px 4px;
     border: none;
     border-radius: 0;
@@ -106,6 +106,17 @@ body {
     box-shadow: none;
     backdrop-filter: none;
     align-items: start;
+}
+
+.profile-side-stack {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 260px;
+    justify-self: center;
 }
 
 .profile .profile_inner h1 {
@@ -119,7 +130,7 @@ body {
 
 .profile .profile_inner > span {
     grid-area: subtitle;
-    max-width: 98ch;
+    max-width: 72ch;
     font-size: 1rem;
     line-height: 1.66;
     margin-top: -2px;
@@ -142,7 +153,7 @@ body {
 
 .profile-home-extra {
     grid-area: extra;
-    max-width: 98ch;
+    max-width: 72ch;
     margin-top: 12px;
     color: var(--content);
 }
@@ -174,24 +185,16 @@ body {
 }
 
 .profile-photo-stack {
-    grid-area: photo;
     display: flex;
-    flex-direction: column;
-    gap: 14px;
-    align-self: start;
-    justify-self: start;
     width: 172px;
 }
 
 .profile-cat-stack {
-    grid-area: cat;
     display: flex;
     flex-direction: column;
-    align-self: start;
-    justify-self: end;
     width: 172px;
-    min-height: 172px;
-    padding-top: 2px;
+    min-height: 0;
+    padding-top: 6px;
     text-decoration: none;
     align-items: center;
     gap: 10px;
@@ -263,7 +266,7 @@ body {
 
 .profile-visitor-map {
     position: relative;
-    width: 100%;
+    width: 172px;
     overflow: hidden;
     background: linear-gradient(180deg, rgba(233, 243, 249, 0.58) 0%, rgba(255, 255, 255, 0.96) 100%);
     border: 1px solid rgba(217, 217, 221, 0.95);
@@ -320,18 +323,26 @@ body {
     text-shadow: none !important;
 }
 
-.profile .social-icons {
-    grid-area: social;
-}
-
 .social-icons a {
     margin-right: 12px;
     color: var(--darkcolor);
 }
 
+.profile .social-icons {
+    grid-area: social;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 2px;
+}
+
 .buttons {
     grid-area: buttons;
     margin-top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px 12px;
 }
 
 .button {
@@ -546,6 +557,19 @@ body {
     white-space: nowrap;
 }
 
+.list-intro-inline-icon {
+    display: inline-flex;
+    vertical-align: -0.15em;
+    margin-left: 0.28em;
+    color: var(--secondary);
+}
+
+.list-intro-inline-icon svg {
+    width: 0.96em;
+    height: 0.96em;
+    stroke: currentColor;
+}
+
 .archive-year + .archive-year {
     margin-top: 18px;
 }
@@ -572,7 +596,7 @@ body {
     .profile .profile_inner {
         grid-template-columns: 1fr;
         grid-template-areas:
-            "photo"
+            "side"
             "title"
             "subtitle"
             "social"
@@ -582,15 +606,28 @@ body {
         text-align: center;
     }
 
+    .profile-side-stack,
     .profile-photo-stack,
     .profile img {
         justify-self: center;
     }
 
+    .profile-side-stack {
+        max-width: 260px;
+    }
+
+    .profile .social-icons,
+    .buttons {
+        justify-content: center;
+    }
+
     .profile-cat-stack {
-        width: min(240px, 72vw);
-        justify-self: center;
+        width: 172px;
         padding-top: 6px;
+    }
+
+    .profile-visitor-map {
+        width: 172px;
     }
 }
 
@@ -603,9 +640,18 @@ body {
         border-radius: 0;
     }
 
+    .profile-side-stack {
+        max-width: 100%;
+    }
+
     .profile-home-extra {
         margin-top: 0;
         padding-top: 0;
+    }
+
+    .profile .social-icons,
+    .buttons {
+        justify-content: center;
     }
 
     .profile img {
@@ -613,6 +659,17 @@ body {
         height: 148px;
         border-radius: 18px;
         object-position: 50% 12%;
+    }
+
+    .profile-photo-stack,
+    .profile-cat-stack,
+    .profile-visitor-map {
+        width: 148px;
+    }
+
+    .profile-cat-image {
+        width: 148px;
+        height: 148px;
     }
 
     .list .post-content > p:first-child {
