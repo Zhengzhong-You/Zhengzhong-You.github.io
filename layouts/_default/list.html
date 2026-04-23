@@ -2,6 +2,13 @@
 
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
+{{- if .Content }}
+<div class="post-content home-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
 {{- else }} {{/* if not profileMode */}}
 
 {{- if not .IsHome | and .Title }}

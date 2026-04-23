@@ -57,7 +57,7 @@ body {
 }
 
 .profile .profile_inner {
-    max-width: 760px;
+    max-width: 860px;
     gap: 14px;
     padding: 34px;
     border: 1px solid rgba(32, 52, 76, 0.10);
@@ -73,7 +73,7 @@ body {
 }
 
 .profile .profile_inner > span {
-    max-width: 62ch;
+    max-width: 76ch;
     font-size: 0.98rem;
     line-height: 1.64;
 }
@@ -139,6 +139,10 @@ body {
     border-radius: 22px;
     padding: 22px 24px;
     box-shadow: 0 16px 42px rgba(31, 40, 51, 0.05);
+}
+
+.home-content {
+    margin-top: 22px;
 }
 
 .page-header {
