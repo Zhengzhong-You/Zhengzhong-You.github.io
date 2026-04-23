@@ -9,8 +9,8 @@
     --border: #d5dde8;
     --darkcolor: #20344c;
     --lightcolor: #e1ebf4;
-    --nav-width: 1100px;
-    --main-width: 860px;
+    --nav-width: 1240px;
+    --main-width: 1040px;
     --radius: 18px;
     --homesize: 15px;
     --textsize: 16px;
@@ -52,13 +52,26 @@ body {
     letter-spacing: -0.02em;
 }
 
+.main .profile {
+    justify-content: center;
+}
+
 .profile {
     min-height: calc(100vh - var(--footer-height) - 140px);
 }
 
 .profile .profile_inner {
-    max-width: 860px;
-    gap: 14px;
+    width: min(1040px, 100%);
+    max-width: 1040px;
+    display: grid;
+    grid-template-columns: 188px minmax(0, 1fr);
+    grid-template-areas:
+        "photo title"
+        "photo subtitle"
+        "photo social"
+        "photo buttons";
+    column-gap: 30px;
+    row-gap: 12px;
     padding: 34px;
     border: 1px solid rgba(32, 52, 76, 0.10);
     border-radius: 28px;
@@ -68,23 +81,34 @@ body {
 }
 
 .profile .profile_inner h1 {
+    grid-area: title;
     font-size: clamp(2.5rem, 7vw, 3.7rem);
     line-height: 0.98;
+    margin: 0;
+    align-self: end;
 }
 
 .profile .profile_inner > span {
-    max-width: 76ch;
+    grid-area: subtitle;
+    max-width: 88ch;
     font-size: 0.98rem;
     line-height: 1.64;
 }
 
 .profile img {
+    grid-area: photo;
     width: 172px;
     height: 172px;
     object-fit: cover;
     border-radius: 20px;
     border: 1px solid rgba(32, 52, 76, 0.08);
     box-shadow: 0 18px 50px rgba(32, 52, 76, 0.20);
+    align-self: start;
+    justify-self: start;
+}
+
+.profile .social-icons {
+    grid-area: social;
 }
 
 .social-icons a {
@@ -93,6 +117,7 @@ body {
 }
 
 .buttons {
+    grid-area: buttons;
     margin-top: 2px;
 }
 
@@ -143,6 +168,7 @@ body {
 
 .home-content {
     margin-top: 22px;
+    max-width: 1040px;
 }
 
 .page-header {
@@ -197,6 +223,9 @@ body {
 
 @media (max-width: 768px) {
     .profile .profile_inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         padding: 26px;
         border-radius: 24px;
     }
