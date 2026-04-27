@@ -15,5 +15,3 @@ The paper *RouteOpt: An Open-Source Modular Exact Solver for Vehicle Routing Pro
 Paper focus: a modular exact solver for vehicle routing problems, with public code, reproducible computational workflows, and extensible solver components.
 
 The manuscript had received a minor revision decision on March 11, 2026, with reviewers and the area editor recommending acceptance.
-
-- Acceptance PDF: [INFORMS Journal on Computing Acceptance Letter](/news/routeopt-ijoc-acceptance.pdf)
