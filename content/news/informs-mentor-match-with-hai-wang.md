@@ -1,5 +1,5 @@
 ---
-title: "INFORMS Mentor Match with Hai Wang"
+title: "INFORMS Mentor Match"
 date: 2026-04-24
 summary: "Started a one-on-one mentoring pairing with Hai Wang through the INFORMS Mentor Match Program, with a focus on career development and research direction in operations research and analytics."
 author:
