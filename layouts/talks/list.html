@@ -1,0 +1,61 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+  <h1>
+    {{ .Title }}
+  </h1>
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+<section class="publication-compact-section" aria-labelledby="selected-talks-heading">
+  <h2 id="selected-talks-heading" class="publication-compact-heading">Selected Talks</h2>
+  <ol class="publication-timeline talks-timeline">
+    {{- range .RegularPages.ByDate.Reverse }}
+    <li class="publication-timeline-item">
+      <a class="publication-timeline-link" href="{{ .RelPermalink }}" aria-label="Read talk: {{ .Title | plainify }}">
+        <time class="publication-timeline-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{- .Date.Format "Jan 2006" -}}
+        </time>
+        <span class="publication-timeline-copy">
+          <span class="publication-timeline-title">{{ .Title }}</span>
+          <span class="publication-timeline-meta">
+            {{- with .Params.venue }}
+            <span class="talk-venue-badge">{{ . }}</span>
+            {{- end }}
+            {{- with .Params.venues }}
+              {{- range . }}
+              <span class="talk-venue-badge">{{ . }}</span>
+              {{- end }}
+            {{- end }}
+            {{- with .Params.tags }}
+              {{- range first 1 . }}
+              <span class="talk-type-badge">{{ . }}</span>
+              {{- end }}
+            {{- end }}
+          </span>
+          {{- with .Params.author }}
+          <span class="compact-timeline-summary">
+            {{- if reflect.IsSlice . -}}
+              {{ delimit . ", " }}
+            {{- else -}}
+              {{ . }}
+            {{- end -}}
+          </span>
+          {{- end }}
+        </span>
+      </a>
+    </li>
+    {{- end }}
+  </ol>
+</section>
+
+{{- end }}{{- /* end main */ -}}

@@ -1,0 +1,52 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+  <h1>
+    {{ .Title }}
+  </h1>
+</header>
+{{- end }}
+
+{{- if .Content }}
+<div class="post-content">
+  {{- if not (.Param "disableAnchoredHeadings") }}
+  {{- partial "anchored_headings.html" .Content -}}
+  {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+<section class="publication-compact-section" aria-labelledby="software-projects-heading">
+  <h2 id="software-projects-heading" class="publication-compact-heading">Projects</h2>
+  <ol class="publication-timeline software-timeline">
+    {{- range .RegularPages.ByDate.Reverse }}
+    {{- $displayTags := slice }}
+    {{- range (.Params.tags | default (slice)) }}
+      {{- if and (ne . "software") (ne . "open source") }}
+        {{- $displayTags = $displayTags | append . }}
+      {{- end }}
+    {{- end }}
+    <li class="publication-timeline-item">
+      <a class="publication-timeline-link" href="{{ .RelPermalink }}" aria-label="Read software project: {{ .Title | plainify }}">
+        <time class="publication-timeline-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{- .Date.Format "Jan 2006" -}}
+        </time>
+        <span class="publication-timeline-copy">
+          <span class="publication-timeline-title">{{ .Title }}</span>
+          <span class="publication-timeline-meta">
+            <span class="software-project-badge">Open source</span>
+            {{- with $displayTags }}
+            <span class="publication-author-line">{{ delimit . " · " }}</span>
+            {{- end }}
+          </span>
+          {{- with .Params.summary }}
+          <span class="compact-timeline-summary">{{ . | plainify | htmlUnescape }}</span>
+          {{- end }}
+        </span>
+      </a>
+    </li>
+    {{- end }}
+  </ol>
+</section>
+
+{{- end }}{{- /* end main */ -}}
