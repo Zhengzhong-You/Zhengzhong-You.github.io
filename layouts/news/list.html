@@ -9,7 +9,7 @@
 {{- end }}
 
 {{- if .Content }}
-<div class="post-content news-list-intro">
+<div class="post-content compact-list-intro news-list-intro">
   {{- if not (.Param "disableAnchoredHeadings") }}
   {{- partial "anchored_headings.html" .Content -}}
   {{- else }}{{ .Content }}{{ end }}

@@ -830,11 +830,11 @@ body {
     stroke: currentColor;
 }
 
-.news-list-intro {
+.compact-list-intro {
     margin-bottom: 14px;
 }
 
-.list .news-list-intro > p:first-child {
+.list .compact-list-intro > p:first-child {
     max-width: 68ch;
     margin-bottom: 0;
     color: var(--secondary);
