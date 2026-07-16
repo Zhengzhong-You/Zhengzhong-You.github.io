@@ -20,7 +20,7 @@
 {{- $working := slice }}
 {{- range .RegularPages.ByDate.Reverse }}
   {{- $tags := .Params.tags | default (slice) }}
-  {{- if or (in $tags "working paper") (not .Params.journal) }}
+  {{- if or .Params.submitted (in $tags "working paper") (not .Params.journal) }}
     {{- $working = $working | append . }}
   {{- else }}
     {{- $published = $published | append . }}
@@ -68,7 +68,9 @@
         <span class="publication-timeline-copy">
           <span class="publication-timeline-title">{{ .Title }}</span>
           <span class="publication-timeline-meta">
+            {{- if not .Params.journal }}
             <span class="publication-working-badge">Working paper</span>
+            {{- end }}
             {{- with .Params.journal }}
             <span class="publication-venue-badge">{{ . }}</span>
             {{- end }}

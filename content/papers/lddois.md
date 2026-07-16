@@ -7,6 +7,7 @@ author:
   - "Haoran Liu"
   - "Baichuan Mo"
 journal: "INFORMS Journal on Computing (submitted)"
+submitted: true
 summary: >-
   Column generation is central to many large-scale optimization algorithms,
   but unstable dual solutions can substantially slow its convergence. We
@@ -14,7 +15,6 @@ summary: >-
   framework that predicts pairwise orderings between dual variables and
   incorporates their primal counterparts directly into the master problem.
 tags:
-  - "working paper"
   - "column generation"
   - "deep dual-optimal inequalities"
   - "dual stabilization"
