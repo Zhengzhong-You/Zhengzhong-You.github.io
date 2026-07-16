@@ -69,6 +69,9 @@
           <span class="publication-timeline-title">{{ .Title }}</span>
           <span class="publication-timeline-meta">
             <span class="publication-working-badge">Working paper</span>
+            {{- with .Params.journal }}
+            <span class="publication-venue-badge">{{ . }}</span>
+            {{- end }}
             {{- with .Params.author }}
             <span class="publication-author-line">{{ delimit . ", " }}</span>
             {{- end }}
