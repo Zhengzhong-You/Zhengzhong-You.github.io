@@ -3,7 +3,7 @@ title: "MIT-UF-NEU Joint Summer Research Camp"
 date: 2026-04-04T14:30:00-04:00
 summary: "Selected participant in the 2026 camp, with research on large-scale inventory placement under demand uncertainty under the mentorship of Baichuan Mo."
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
 tags:
   - "research training"
   - "inventory optimization"

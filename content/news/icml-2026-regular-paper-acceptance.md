@@ -3,7 +3,7 @@ title: "ICML 2026 Regular Paper Acceptance"
 date: 2026-04-30T12:17:00-04:00
 summary: "Draft-and-Audit Reinforcement Learning for Optimization Modeling was accepted as a regular paper at ICML 2026."
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
 tags:
   - "publication"
   - "ICML"

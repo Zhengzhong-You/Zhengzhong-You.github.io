@@ -4,7 +4,7 @@ date: 2026-04-30T12:17:00-04:00
 author:
   - "Zeping Min"
   - "Weihang Xu"
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
   - "Wotao Yin"
   - "Xinshang Wang"
 journal: "ICML 2026"

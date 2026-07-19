@@ -1,5 +1,5 @@
 baseURL: "https://zhengzhong-you.github.io/"
-title: Ricky Zhengzhong You
+title: Zhengzhong Ricky You
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -26,8 +26,8 @@ menu:
       weight: 5
 
 params:
-  description: "Personal website of Ricky Zhengzhong You, an operations research researcher working on exact and learning-augmented optimization for routing, scheduling, and inventory systems."
-  author: Ricky Zhengzhong You
+  description: "Personal website of Zhengzhong Ricky You, an operations research researcher working on exact and learning-augmented optimization for routing, scheduling, and inventory systems."
+  author: Zhengzhong Ricky You
   keywords:
     - operations research
     - exact optimization
@@ -57,7 +57,7 @@ params:
   math: false
   profileMode:
     enabled: true
-    title: Ricky Zhengzhong You
+    title: Zhengzhong Ricky You
     subtitle: |
       *Love wins in both research and life, with kindness and empathy guiding every decision.*
 

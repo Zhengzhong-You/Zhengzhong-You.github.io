@@ -4,7 +4,7 @@ date: 2024-10-01
 summary: "Presented at the 2024 INFORMS Annual Meeting on modular exact solver design for vehicle routing problems."
 tags: ["conference talk", "vehicle routing", "solver engineering"]
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
   - "Yu Yang"
 venue: "2024 INFORMS Annual Meeting"
 ---

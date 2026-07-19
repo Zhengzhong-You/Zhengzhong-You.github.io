@@ -3,7 +3,7 @@ title: "Accelerating Dynamic Programming via Dual Selection for Column-Generatio
 date: 2024-03-01
 summary: "Presented at the 2024 INFORMS Optimization Society Conference with travel support."
 tags: ["conference talk", "dynamic programming", "column generation"]
-author: ["Ricky Zhengzhong You"]
+author: ["Zhengzhong Ricky You"]
 venue: "2024 INFORMS Optimization Society Conference"
 ---
 

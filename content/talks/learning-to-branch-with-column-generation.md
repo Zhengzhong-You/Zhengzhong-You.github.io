@@ -3,7 +3,7 @@ title: "Learning to Branch with Column Generation"
 date: 2022-10-01
 summary: "Presented at the 2022 INFORMS Annual Meeting on early learning-to-branch ideas in column-generation settings."
 tags: ["conference talk", "column generation", "learning to branch"]
-author: ["Ricky Zhengzhong You"]
+author: ["Zhengzhong Ricky You"]
 venue: "2022 INFORMS Annual Meeting"
 ---
 

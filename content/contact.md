@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-description: "How to reach Ricky Zhengzhong You."
+description: "How to reach Zhengzhong Ricky You."
 ---
 
 - Email: [ricky.you.or@gmail.com](mailto:ricky.you.or@gmail.com)

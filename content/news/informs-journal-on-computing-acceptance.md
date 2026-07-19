@@ -3,7 +3,7 @@ title: "INFORMS Journal on Computing Acceptance"
 date: 2026-04-04T10:44:00-04:00
 summary: "RouteOpt was accepted by INFORMS Journal on Computing, recognizing the open-source modular exact solver project for vehicle routing problems."
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
 tags:
   - "publication"
   - "INFORMS Journal on Computing"

@@ -3,7 +3,7 @@ title: "University of Kentucky Visiting Scholar"
 date: 2026-03-16T12:00:00-04:00
 summary: "Started a visiting scholar appointment at the University of Kentucky under the supervision of Chenglong Ye, with research on online learning for exact optimization algorithms."
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
 tags:
   - "research appointment"
   - "University of Kentucky"

@@ -3,7 +3,7 @@ title: "TSL 2026 Presentation Acceptance"
 date: 2026-03-02T15:07:00-05:00
 summary: "The paper on learning-based deep dual-optimal inequalities for stabilizing column generation was accepted for presentation at the 2026 INFORMS Transportation and Logistics Society Conference."
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
 tags:
   - "conference"
   - "TSL"

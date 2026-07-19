@@ -3,7 +3,7 @@ title: "Alibaba Group (U.S.) Internship Offer"
 date: 2025-07-15T12:00:00-04:00
 summary: "Accepted a full-time Algorithm Engineer Intern offer from Alibaba Group (U.S.) Inc. for work on deep learning, reinforcement learning, and LLM-based methods for operations research problems."
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
 tags:
   - "internship"
   - "Alibaba"

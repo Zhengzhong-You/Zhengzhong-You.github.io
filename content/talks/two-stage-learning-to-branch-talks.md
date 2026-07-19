@@ -3,7 +3,7 @@ title: "Two-Stage Learning to Branch in the Branch-Price-and-Cut Solution Framew
 date: 2025-09-15
 summary: "Presented at the 2023 INFORMS Annual Meeting and later as an invited talk at the 2025 UK AI/ML Symposium and Nontechnical Workshop."
 tags: ["invited talk", "learning to branch", "exact optimization"]
-author: "Ricky Zhengzhong You, Yu Yang, Xinshang Wang, Wotao Yin"
+author: "Zhengzhong Ricky You, Yu Yang, Xinshang Wang, Wotao Yin"
 venues:
   - "2025 UK AI/ML Symposium and Nontechnical Workshop"
   - "2023 INFORMS Annual Meeting"

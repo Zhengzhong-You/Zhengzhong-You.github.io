@@ -3,7 +3,7 @@ title: "L-DDOIs: Learning-Based Deep Dual-Optimal Inequalities for Stabilizing C
 date: 2025-10-26
 summary: "Conference presentations on learning-based stabilization for column generation at the 2025 INFORMS Annual Meeting and the 2026 Transportation Science & Logistics Conference."
 tags: ["conference talk", "column generation", "learning-based optimization"]
-author: ["Ricky Zhengzhong You", "Bo Tang", "Haoran Liu"]
+author: ["Zhengzhong Ricky You", "Bo Tang", "Haoran Liu"]
 venues:
   - "2026 Transportation Science & Logistics Conference"
   - "2025 INFORMS Annual Meeting"

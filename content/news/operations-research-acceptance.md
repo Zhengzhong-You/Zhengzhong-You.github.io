@@ -3,7 +3,7 @@ title: "Operations Research Acceptance"
 date: 2026-01-14T12:00:00-05:00
 summary: "The paper on two-stage learning to branch for exact vehicle routing was accepted by Operations Research."
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
 tags:
   - "publication"
   - "Operations Research"

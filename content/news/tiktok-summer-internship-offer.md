@@ -3,7 +3,7 @@ title: "TikTok Summer Internship"
 date: 2026-04-30T09:00:00-04:00
 summary: "May 18-August 21, 2026 Machine Learning Engineer Intern role at TikTok in E-commerce Supply Chain and Logistics."
 author:
-  - "Ricky Zhengzhong You"
+  - "Zhengzhong Ricky You"
 tags:
   - "internship"
   - "TikTok"
