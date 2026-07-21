@@ -24,6 +24,8 @@ tags:
   - "headway variability"
   - "bulk service queueing"
   - "stability"
+listFigure: "/publication-figures/transit-resilience-single-route.png"
+listFigureAlt: "Single transit route with a transportation hub, boarding and alighting passengers, and vehicles serving successive stations"
 ---
 
 Submitted to *Transportation Science*.
