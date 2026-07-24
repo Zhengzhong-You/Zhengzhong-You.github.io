@@ -28,3 +28,14 @@ Feel free to reach out about research, software, talks, and collaboration opport
 - GitHub: [Zhengzhong-You](https://github.com/Zhengzhong-You)
 - LinkedIn: [Ricky You](https://www.linkedin.com/in/ricky-you-22a41521a/)
 - ORCID: [0009-0007-3480-5578](https://orcid.org/0009-0007-3480-5578)
+
+## Peer Review Service
+
+I have served as a reviewer for the following journals:
+
+- *INFORMS Journal on Computing*
+- *Transportation Science*
+- *Transportation Research Part B: Methodological*
+- *IISE Transactions*
+- *Computers & Operations Research*
+- *OR Spectrum*
