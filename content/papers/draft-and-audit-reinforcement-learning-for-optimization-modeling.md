@@ -7,7 +7,7 @@ author:
   - "Zhengzhong Ricky You"
   - "Wotao Yin"
   - "Xinshang Wang"
-journal: "ICML 2026 · PMLR 306"
+journal: "ICML 2026"
 summary: >-
   Natural language to optimization requires translating unstructured text into
   executable mathematical models. Beyond simple syntax errors, this task suffers

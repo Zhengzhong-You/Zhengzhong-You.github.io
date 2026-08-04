@@ -8,7 +8,7 @@ author:
   - "Zuo-Jun Max Shen"
   - "Haris N. Koutsopoulos"
   - "Jinhua Zhao"
-journal: "Transportation Science (submitted)"
+journal: "Transportation Science (Under Review)"
 submitted: true
 summary: >-
   Short service suspensions are common in public transit systems, but their

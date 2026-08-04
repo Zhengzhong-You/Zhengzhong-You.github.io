@@ -6,7 +6,7 @@ author:
   - "Bo Tang"
   - "Haoran Liu"
   - "Baichuan Mo"
-journal: "INFORMS Journal on Computing (submitted)"
+journal: "INFORMS Journal on Computing (Under Review)"
 submitted: true
 summary: >-
   Column generation is central to many large-scale optimization algorithms,
