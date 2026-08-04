@@ -24,7 +24,7 @@ listFigure: "/publication-figures/l-pddois-pipeline.png"
 listFigureAlt: "Prediction and postprocessing pipeline for learned pairwise deep dual-optimal inequalities"
 ---
 
-Submitted to *INFORMS Journal on Computing*.
+Under review at *INFORMS Journal on Computing*.
 
 - arXiv: [2607.13373](https://arxiv.org/abs/2607.13373)
 - Preprint: [PDF](/papers/l-pddois-preprint.pdf)

@@ -28,7 +28,7 @@ listFigure: "/publication-figures/transit-resilience-single-route.png"
 listFigureAlt: "Single transit route with a transportation hub, boarding and alighting passengers, and vehicles serving successive stations"
 ---
 
-Submitted to *Transportation Science*.
+Under review at *Transportation Science*.
 
 - arXiv: [2301.00918](https://arxiv.org/abs/2301.00918)
 - Preprint: [PDF](/papers/bulk-service-queueing-transit-resilience-preprint.pdf)
