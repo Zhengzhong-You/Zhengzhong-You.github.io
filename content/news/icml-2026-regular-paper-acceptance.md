@@ -15,4 +15,4 @@ The paper *Draft-and-Audit Reinforcement Learning for Optimization Modeling* was
 
 Paper focus: reinforcement learning for natural-language-to-optimization modeling, with a two-turn draft-and-audit workflow that reduces silent modeling failures.
 
-- OpenReview: [forum](https://openreview.net/forum?id=3rzJANFrMp)
+- Official ICML page: [paper](https://icml.cc/virtual/2026/poster/66426)
