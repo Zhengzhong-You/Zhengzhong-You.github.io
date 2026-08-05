@@ -34,6 +34,7 @@ Feel free to reach out about research, software, talks, and collaboration opport
 I have served as a reviewer for the following journals:
 
 - *INFORMS Journal on Computing*
+- *INFORMS Journal on Optimization*
 - *Transportation Science*
 - *Transportation Research Part B: Methodological*
 - *IISE Transactions*
