@@ -1,0 +1,5 @@
+{{- $corresponding := .Params.correspondingAuthor -}}
+{{- range $index, $author := .Params.author -}}
+  {{- if $index }}, {{ end -}}
+  {{- $author -}}{{- if eq $author $corresponding }}<sup>*</sup>{{ end -}}
+{{- end -}}

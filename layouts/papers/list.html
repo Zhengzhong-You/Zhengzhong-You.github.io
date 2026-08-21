@@ -43,8 +43,8 @@
             {{- with .Params.journal }}
             <span class="publication-venue-badge">{{ . }}</span>
             {{- end }}
-            {{- with .Params.author }}
-            <span class="publication-author-line">{{ delimit . ", " }}</span>
+            {{- if .Params.author }}
+            <span class="publication-author-line">{{ partial "paper_authors.html" . }}</span>
             {{- end }}
           </span>
         </span>
@@ -74,8 +74,8 @@
             {{- with .Params.journal }}
             <span class="publication-venue-badge">{{ . }}</span>
             {{- end }}
-            {{- with .Params.author }}
-            <span class="publication-author-line">{{ delimit . ", " }}</span>
+            {{- if .Params.author }}
+            <span class="publication-author-line">{{ partial "paper_authors.html" . }}</span>
             {{- end }}
           </span>
         </span>
