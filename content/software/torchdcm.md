@@ -3,6 +3,8 @@ title: "TorchDCM"
 date: 2026-08-08
 summary: "A unified PyTorch-native package for discrete choice modeling."
 tags: ["software", "discrete choice modeling", "PyTorch", "econometrics", "open source"]
+listFigure: "/publication-figures/torchdcm-logo.png"
+listFigureAlt: "TorchDCM logo from the project GitHub README"
 ---
 
 TorchDCM is a unified PyTorch-native package for estimating and analyzing discrete choice models, co-developed with Baichuan.

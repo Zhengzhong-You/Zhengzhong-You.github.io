@@ -3,7 +3,7 @@ title: "TorchDCM: A Unified PyTorch-Native Package for Discrete Choice Modeling"
 date: 2026-08-04
 author:
   - "Baichuan Mo"
-  - "Zhengzhong Ricky You (corresponding author)"
+  - "Zhengzhong Ricky You⁎"
   - "Xiqun Michael Chen"
   - "Ruimin Li"
 journal: "INFORMS Journal on Computing (Under Review)"
@@ -18,9 +18,13 @@ tags:
   - "econometrics"
   - "GPU computing"
   - "open source"
+listFigure: "/publication-figures/torchdcm-logo.png"
+listFigureAlt: "TorchDCM logo from the project GitHub README"
 ---
 
 Under review at *INFORMS Journal on Computing*.
+
+⁎ Corresponding author.
 
 - arXiv: [2608.19231](https://arxiv.org/abs/2608.19231)
 - Repository: [GitHub](https://github.com/mbc96325/torchdcm)
