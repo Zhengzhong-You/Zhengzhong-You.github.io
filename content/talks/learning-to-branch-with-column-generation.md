@@ -14,4 +14,3 @@ In retrospect, this talk served as an earlier step toward the later two-stage le
 - Venue: 2022 INFORMS Annual Meeting
 - Related paper:
   - [Two-Stage Learning to Branch in Branch-Price-and-Cut Algorithms for Solving Vehicle Routing Problems Exactly](/papers/two-stage-learning-to-branch/)
-- Slides PDF: coming soon

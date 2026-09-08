@@ -7,7 +7,7 @@ listFigure: "/publication-figures/torchdcm-logo.png"
 listFigureAlt: "TorchDCM logo from the project GitHub README"
 ---
 
-TorchDCM is a unified PyTorch-native package for estimating and analyzing discrete choice models, co-developed with Baichuan.
+TorchDCM is a unified PyTorch-native package for estimating and analyzing discrete choice models, co-developed with Baichuan Mo.
 
 - Repository: [github.com/mbc96325/torchdcm](https://github.com/mbc96325/torchdcm)
 - Paper: [arXiv:2608.19231](https://arxiv.org/abs/2608.19231)

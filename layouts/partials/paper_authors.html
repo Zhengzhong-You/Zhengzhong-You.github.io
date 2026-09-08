@@ -1,5 +1,10 @@
 {{- $corresponding := .Params.correspondingAuthor -}}
-{{- range $index, $author := .Params.author -}}
+{{- $authors := .Params.author | default site.Params.author -}}
+{{- if not (reflect.IsSlice $authors) -}}
+  {{- $authors = split $authors "," -}}
+{{- end -}}
+{{- range $index, $name := $authors -}}
+  {{- $author := trim $name " " -}}
   {{- if $index }}, {{ end -}}
-  {{- if eq $author "Zhengzhong Ricky You" }}<span class="publication-author-self">{{ $author }}</span>{{ else }}{{ $author }}{{ end -}}{{- if eq $author $corresponding }}<sup>*</sup>{{ end -}}
+  <span{{ if eq $author site.Params.author }} class="publication-author-self"{{ end }}>{{ $author }}{{ if eq $author $corresponding }}<sup>*</sup>{{ end }}</span>
 {{- end -}}

@@ -16,4 +16,3 @@ The presentation also highlighted RouteOpt's exact-solution performance, its reu
 - Venue: 2024 INFORMS Annual Meeting
 - Related paper:
   - [RouteOpt: An Open-Source Modular Exact Solver for Vehicle Routing Problems](/papers/routeopt/)
-- Slides PDF: coming soon

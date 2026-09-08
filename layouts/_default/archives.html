@@ -1,7 +1,9 @@
 {{- define "main" }}
 
 <header class="page-header">
+  <h1>{{ .Title }}</h1>
 </header>
+{{- with .Content }}<div class="post-content compact-list-intro">{{ . }}</div>{{ end }}
 
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- if site.Params.ShowAllPagesInArchive }}
@@ -16,6 +18,7 @@
     <a class="archive-header-link" href="#{{ $year }}">
       {{- $year -}}
     </a>
+  </h2>
   {{- range .Pages.GroupByDate "January" }}
   <div class="archive-month">
     <h3 class="archive-month-header" id="{{ $year }}-{{ .Key }}">

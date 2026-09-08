@@ -40,11 +40,11 @@
 {{- end }}
 
 <header class="header">
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}
-            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }}">
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }}" aria-label="Ricky — Home">
                 {{- if site.Params.label.icon }}
                 {{- $img := resources.Get site.Params.label.icon }}
                 {{- if $img }}
@@ -127,12 +127,14 @@
             {{- $is_cv := eq (strings.TrimSuffix "/" .URL) "cv.pdf" }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
+            {{- $is_active := or (eq $menu_item_url $page_url) (hasPrefix $page_url $menu_item_url) }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
             <li>
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}
+                {{- if $is_active }} aria-current="{{ if eq $menu_item_url $page_url }}page{{ else }}location{{ end }}"{{ end }}
                 {{- if $is_cv }} target="_blank" rel="noopener noreferrer"{{- end }}>
-                    <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                    <span {{- if $is_active }} class="active" {{- end }}>
                         {{- .Pre }}
                         {{- .Name -}}
                         {{ .Post -}}

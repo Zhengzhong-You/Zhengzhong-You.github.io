@@ -35,6 +35,12 @@
   </div>
   {{- end }}
 
+  {{- with .Params.listFigure }}
+  <figure class="paper-detail-figure software-detail-figure">
+    <img loading="lazy" src="{{ . | relURL }}" alt="{{ $.Params.listFigureAlt | default $.Title }}">
+  </figure>
+  {{- end }}
+
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">

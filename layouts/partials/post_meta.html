@@ -1,7 +1,9 @@
 {{- $scratch := newScratch }}
 
 {{- if not .Date.IsZero -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
+{{- $dateFormat := default "January 2, 2006" site.Params.DateFormat -}}
+{{- if eq .Section "news" }}{{ $dateFormat = "January 2, 2006" }}{{ end -}}
+{{- $scratch.Add "meta" (slice (printf "<time datetime='%s'>%s</time>" (.Date.Format "2006-01-02") (.Date | time.Format $dateFormat))) }}
 {{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
@@ -13,7 +15,7 @@
 {{- end }}
 
 {{- if not (.Param "hideAuthor") -}}
-{{- with (partial "author.html" .) }}
+{{- with (partial "paper_authors.html" .) }}
 {{- $scratch.Add "meta" (slice .) }}
 {{- end }}
 {{- end }}

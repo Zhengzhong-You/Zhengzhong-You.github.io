@@ -5,6 +5,7 @@
 {{- else }} {{/* if not profileMode */}}
 
 {{- if not .IsHome | and .Title }}
+{{- partial "breadcrumbs.html" . }}
 <header class="page-header">
   <h1>
     {{ .Title }}
@@ -34,6 +35,9 @@
 {{- end }}
 
 {{- $term := .Data.Term }}
+{{- if and $term (where $pages "Params.correspondingauthor" "ne" nil) }}
+<p class="publication-author-legend"><sup>*</sup> Corresponding author.</p>
+{{- end }}
 {{- range $index, $page := $paginator.Pages }}
 
 {{- $class := "post-entry" }}

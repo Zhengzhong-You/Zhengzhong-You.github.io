@@ -44,7 +44,7 @@ params:
   disableSpecial1stPost: true
   disableAnchoredHeadings: true
   ShowPostNavLinks: true
-  ShowBreadCrumbs: false
+  ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowAllPagesInArchive: false
   mainSections: ["papers", "software", "talks"]

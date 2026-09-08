@@ -1,14 +1,16 @@
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- if and (gt (len $pages) 1) (in $pages . ) }}
-<nav class="paginav">
+{{- $pages := .CurrentSection.RegularPages.ByDate.Reverse }}
+{{- if and (not .CurrentSection.IsHome) (gt (len $pages) 1) (in $pages . ) }}
+<nav class="paginav" aria-label="More in {{ .CurrentSection.Title }}">
   {{- with $pages.Next . }}
   <a class="prev" href="{{ .Permalink }}">
-    <span> &larr;&nbsp;{{- .Name -}}</span>
+    <span class="paginav-label">&larr; Previous</span>
+    <span>{{ .Name }}</span>
   </a>
   {{- end }}
   {{- with $pages.Prev . }}
   <a class="next" href="{{ .Permalink }}">
-    <span>{{- .Name -}}&nbsp;&rarr;</span>
+    <span class="paginav-label">Next &rarr;</span>
+    <span>{{ .Name }}</span>
   </a>
   {{- end }}
 </nav>

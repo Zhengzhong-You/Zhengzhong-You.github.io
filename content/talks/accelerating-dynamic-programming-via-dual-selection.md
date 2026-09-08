@@ -12,5 +12,3 @@ This talk examined how dual selection can accelerate dynamic programming compone
 The presentation was supported by travel funding from the 2024 INFORMS Optimization Society Conference and reflected my broader interest in making exact optimization methods more scalable in practice.
 
 - Venue: 2024 INFORMS Optimization Society Conference
-- Related paper: coming soon
-- Slides PDF: coming soon

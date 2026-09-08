@@ -42,13 +42,9 @@
               {{- end }}
             {{- end }}
           </span>
-          {{- with .Params.author }}
-          <span class="compact-timeline-summary">
-            {{- if reflect.IsSlice . -}}
-              {{ delimit . ", " }}
-            {{- else -}}
-              {{ . }}
-            {{- end -}}
+          {{- if .Params.author }}
+          <span class="publication-author-line talk-author-line">
+            {{- partial "paper_authors.html" . -}}
           </span>
           {{- end }}
         </span>

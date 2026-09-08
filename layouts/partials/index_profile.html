@@ -60,7 +60,7 @@ another pet.</p>
                 {{- $buttonUrl := trim .url " " }}
                 {{- $is_cv := eq (strings.TrimSuffix "/" $buttonUrl) "cv.pdf" }}
                 {{- $is_external := gt (len (findRE "://" $buttonUrl)) 0 }}
-                <a class="button" href="{{ $buttonUrl }}" rel="noopener" title="{{ .name }}"
+                <a class="button" href="{{ $buttonUrl }}" title="{{ .name }}"
                     {{- if or $is_cv $is_external }} target="_blank" rel="noopener noreferrer"{{- end }}>
                     <span class="button-inner">
                         {{ .name }}
