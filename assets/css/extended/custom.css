@@ -799,6 +799,11 @@ body {
     line-height: 1.35;
 }
 
+.publication-author-self {
+    color: #3b3e47;
+    font-weight: 600;
+}
+
 .compact-timeline-summary {
     display: -webkit-box;
     margin-top: 4px;

@@ -1,5 +1,5 @@
 {{- $corresponding := .Params.correspondingAuthor -}}
 {{- range $index, $author := .Params.author -}}
   {{- if $index }}, {{ end -}}
-  {{- $author -}}{{- if eq $author $corresponding }}<sup>*</sup>{{ end -}}
+  {{- if eq $author "Zhengzhong Ricky You" }}<span class="publication-author-self">{{ $author }}</span>{{ else }}{{ $author }}{{ end -}}{{- if eq $author $corresponding }}<sup>*</sup>{{ end -}}
 {{- end -}}
