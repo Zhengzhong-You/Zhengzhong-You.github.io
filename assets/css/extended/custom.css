@@ -804,6 +804,11 @@ body {
     font-weight: 600;
 }
 
+.publication-author-self + sup {
+    color: #3b3e47;
+    font-weight: 600;
+}
+
 .compact-timeline-summary {
     display: -webkit-box;
     margin-top: 4px;
