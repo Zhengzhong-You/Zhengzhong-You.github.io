@@ -9,7 +9,7 @@ author:
   - "Hu Qin"
   - "Lijun Wei"
   - "Zhou Xu"
-journal: "INFORMS Journal on Computing (Manuscript)"
+journal: "INFORMS Journal on Computing (Under Review)"
 summary: >-
   An open-source exact solver for bin packing with generalized precedence
   constraints, combining branch-bound-and-remember search with valid
@@ -25,7 +25,7 @@ listFigure: "/publication-figures/precpack-cover.svg"
 listFigureAlt: "PrecPack: precedence-linked items and their ordered bin assignment, from the project GitHub repository"
 ---
 
-Manuscript for *INFORMS Journal on Computing*.
+Under review at *INFORMS Journal on Computing*.
 
 - arXiv: [2609.17368](https://arxiv.org/abs/2609.17368)
 - Preprint: [PDF](https://arxiv.org/pdf/2609.17368)
