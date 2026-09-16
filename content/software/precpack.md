@@ -2,7 +2,7 @@
 title: "PrecPack"
 date: 2026-09-15
 summary: "An efficient open-source exact solver for bin packing with generalized precedence constraints."
-tags: ["software", "bin packing", "branch-bound-and-remember", "C++", "open source"]
+tags: ["software", "bin packing", "branch-bound-and-remember", "open source"]
 listFigure: "/publication-figures/precpack-cover.svg"
 listFigureAlt: "PrecPack: precedence-linked items and their ordered bin assignment, from the project GitHub repository"
 ---
