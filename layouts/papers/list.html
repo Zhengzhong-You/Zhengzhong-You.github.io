@@ -68,7 +68,7 @@
         <span class="publication-timeline-copy">
           <span class="publication-timeline-title">{{ .Title }}</span>
           <span class="publication-timeline-meta">
-            {{- if not .Params.journal }}
+            {{- if and (not .Params.journal) (not .Params.hideStatus) }}
             <span class="publication-working-badge">Working paper</span>
             {{- end }}
             {{- with .Params.journal }}

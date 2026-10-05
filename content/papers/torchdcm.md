@@ -7,8 +7,7 @@ author:
   - "Xiqun Michael Chen"
   - "Ruimin Li"
 correspondingAuthor: "Zhengzhong Ricky You"
-journal: "INFORMS Journal on Computing (Under Review)"
-submitted: true
+hideStatus: true
 summary: >-
   TorchDCM is a unified PyTorch-native package for discrete choice modeling.
   It supports estimation, inference, prediction, and structured reporting on
@@ -22,8 +21,6 @@ tags:
 listFigure: "/publication-figures/torchdcm-logo.png"
 listFigureAlt: "TorchDCM logo from the project GitHub README"
 ---
-
-Under review at *INFORMS Journal on Computing*.
 
 \* Corresponding author.
 
