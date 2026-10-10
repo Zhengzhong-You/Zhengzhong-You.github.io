@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /shared-drafts/
+
+Sitemap: {{ "sitemap.xml" | absURL }}
