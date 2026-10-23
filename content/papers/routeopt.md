@@ -1,4 +1,5 @@
 +++
+weight = 2
 title = "RouteOpt: An Open-Source Modular Exact Solver for Vehicle Routing Problems"
 date = 2026-04-04
 author = ["Zhengzhong Ricky You", "Yu Yang"]
@@ -9,7 +10,7 @@ listFigure = "/publication-figures/routeopt-classdiagram.png"
 listFigureAlt = "Simplified RouteOpt class diagram"
 +++
 
-Article accepted by *INFORMS Journal on Computing*.
+*INFORMS Journal on Computing*, 2026.
 
 - DOI: [10.1287/ijoc.2025.1415](https://pubsonline.informs.org/doi/10.1287/ijoc.2025.1415)
 - Preprint: [PDF](/papers/routeopt_preprint.pdf)

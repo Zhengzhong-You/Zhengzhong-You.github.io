@@ -18,7 +18,7 @@
 
 {{- $published := slice }}
 {{- $working := slice }}
-{{- range .RegularPages.ByDate.Reverse }}
+{{- range .RegularPages.ByWeight }}
   {{- $tags := .Params.tags | default (slice) }}
   {{- if or .Params.submitted (in $tags "working paper") (not .Params.journal) }}
     {{- $working = $working | append . }}
@@ -29,13 +29,13 @@
 
 {{- if gt (len $published) 0 }}
 <section class="publication-compact-section" aria-labelledby="published-papers-heading">
-  <h2 id="published-papers-heading" class="publication-compact-heading">Published / Accepted</h2>
+  <h2 id="published-papers-heading" class="publication-compact-heading">Published</h2>
   <ol class="publication-timeline publication-timeline-published">
     {{- range $published }}
     <li class="publication-timeline-item">
       <a class="publication-timeline-link" href="{{ .RelPermalink }}" aria-label="Read paper: {{ .Title | plainify }}">
-        <time class="publication-timeline-date" datetime="{{ .Date.Format "2006-01-02" }}">
-          {{- .Date.Format "Jan 2006" -}}
+        <time class="publication-timeline-date" datetime="{{ .Date.Format "2006" }}">
+          {{- .Date.Format "2006" -}}
         </time>
         <span class="publication-timeline-copy">
           <span class="publication-timeline-title">{{ .Title }}</span>
@@ -62,8 +62,8 @@
     {{- range $working }}
     <li class="publication-timeline-item">
       <a class="publication-timeline-link" href="{{ .RelPermalink }}" aria-label="Read paper: {{ .Title | plainify }}">
-        <time class="publication-timeline-date" datetime="{{ .Date.Format "2006-01-02" }}">
-          {{- .Date.Format "Jan 2006" -}}
+        <time class="publication-timeline-date" datetime="{{ .Date.Format "2006" }}">
+          {{- .Date.Format "2006" -}}
         </time>
         <span class="publication-timeline-copy">
           <span class="publication-timeline-title">{{ .Title }}</span>

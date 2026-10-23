@@ -1,4 +1,5 @@
 ---
+weight: 8
 title: "PrecPack: An Efficient Open-Source Exact Solver for Bin Packing with Generalized Precedence Constraints"
 date: 2026-09-15
 author:

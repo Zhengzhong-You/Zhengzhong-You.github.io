@@ -1,4 +1,7 @@
 {{- $pages := .CurrentSection.RegularPages.ByDate.Reverse }}
+{{- if eq .Section "papers" }}
+  {{- $pages = .CurrentSection.RegularPages.ByWeight }}
+{{- end }}
 {{- if and (not .CurrentSection.IsHome) (gt (len $pages) 1) (in $pages . ) }}
 <nav class="paginav" aria-label="More in {{ .CurrentSection.Title }}">
   {{- with $pages.Next . }}

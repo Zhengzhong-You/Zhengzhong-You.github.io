@@ -1,4 +1,5 @@
 ---
+weight: 4
 title: "Towards Routing Foundation Models for Commercial Vehicles"
 date: 2026-09-20
 author:

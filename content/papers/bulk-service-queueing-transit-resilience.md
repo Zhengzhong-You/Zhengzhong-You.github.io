@@ -1,14 +1,15 @@
 ---
+weight: 6
 title: "Bulk Service Queueing for Transit Resilience under Short Random Service Suspensions"
 date: 2026-07-21
 author:
   - "Baichuan Mo"
-  - "Li Jin"
   - "Zhengzhong Ricky You"
+  - "Li Jin"
   - "Zuo-Jun Max Shen"
   - "Haris N. Koutsopoulos"
   - "Jinhua Zhao"
-journal: "Transportation Science (Under Review)"
+journal: "Transportation Science (Reject and Resubmit)"
 submitted: true
 summary: >-
   Short service suspensions are common in public transit systems, but their
@@ -28,7 +29,9 @@ listFigure: "/publication-figures/transit-resilience-single-route.png"
 listFigureAlt: "Single transit route with a transportation hub, boarding and alighting passengers, and vehicles serving successive stations"
 ---
 
-Under review at *Transportation Science*.
+Reject and resubmit at *Transportation Science*.
+
+Baichuan Mo and Zhengzhong Ricky You contributed equally.
 
 - arXiv: [2301.00918](https://arxiv.org/abs/2301.00918)
 - Preprint: [PDF](/papers/bulk-service-queueing-transit-resilience-preprint.pdf)

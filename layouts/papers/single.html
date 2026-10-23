@@ -18,7 +18,7 @@
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta paper-post-meta">
       <span class="publication-meta-text">
-        {{- .Date | time.Format "January 2006" -}}
+        {{- .Date | time.Format "2006" -}}
         {{- with .Params.author }}&nbsp;•&nbsp;{{ partial "paper_authors.html" $paper }}{{ end -}}
       </span>
       {{- with .Params.journal }}
