@@ -5,7 +5,7 @@ author:
   - "Bo Tang"
   - "Yunfei Ma"
   - "Zhengzhong Ricky You"
-journal: "UMFM 2026, ACM SIGSPATIAL (Accepted Vision Paper)"
+journal: "UMFM 2026, ACM SIGSPATIAL"
 summary: >-
   A research roadmap for routing foundation models pretrained on commercial
   fleet trajectories, with controlled studies of scaling, transfer, and privacy.
