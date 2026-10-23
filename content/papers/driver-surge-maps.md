@@ -9,6 +9,10 @@ author:
   - "Yuan Zhou"
   - "Hao Yi Ong"
   - "Zuo-Jun Max Shen"
+coFirstAuthors:
+  - "Yida Xu"
+  - "Baichuan Mo"
+  - "Zhengzhong Ricky You"
 journal: "Manufacturing & Service Operations Management (Planned Submission)"
 submitted: true
 tags:

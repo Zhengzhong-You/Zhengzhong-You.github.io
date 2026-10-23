@@ -38,7 +38,7 @@
           {{- .Date.Format "2006" -}}
         </time>
         <span class="publication-timeline-copy">
-          <span class="publication-timeline-title">{{ .Title }}</span>
+          <span class="publication-timeline-title">{{ if .Params.alphabeticalAuthors }}<sup title="Authors listed alphabetically by last name">‡</sup> {{ end }}{{ .Title }}</span>
           <span class="publication-timeline-meta">
             {{- with .Params.journal }}
             <span class="publication-venue-badge">{{ . }}</span>
@@ -66,7 +66,7 @@
           {{- .Date.Format "2006" -}}
         </time>
         <span class="publication-timeline-copy">
-          <span class="publication-timeline-title">{{ .Title }}</span>
+          <span class="publication-timeline-title">{{ if .Params.alphabeticalAuthors }}<sup title="Authors listed alphabetically by last name">‡</sup> {{ end }}{{ .Title }}</span>
           <span class="publication-timeline-meta">
             {{- if and (not .Params.journal) (not .Params.hideStatus) }}
             <span class="publication-working-badge">Working paper</span>

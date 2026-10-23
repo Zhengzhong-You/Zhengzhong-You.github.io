@@ -5,7 +5,7 @@
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title entry-hint-parent">
-      {{ .Title }}
+      {{ if .Params.alphabeticalAuthors }}<sup title="Authors listed alphabetically by last name">‡</sup> {{ end }}{{ .Title }}
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="42" viewBox="0 -960 960 960" fill="currentColor">
@@ -28,6 +28,13 @@
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
     </div>
+    {{- if or .Params.correspondingAuthor .Params.coFirstAuthors .Params.alphabeticalAuthors }}
+    <p class="publication-author-legend">
+      {{- if .Params.correspondingAuthor }}<sup>*</sup> Corresponding author. {{ end -}}
+      {{- if .Params.coFirstAuthors }}<sup>†</sup> Co-first authors; contributed equally. {{ end -}}
+      {{- if .Params.alphabeticalAuthors }}<sup>‡</sup> Authors listed alphabetically by last name.{{ end -}}
+    </p>
+    {{- end }}
     {{- end }}
   </header>
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}

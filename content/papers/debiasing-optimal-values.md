@@ -7,6 +7,7 @@ author:
   - "Huajie Qian"
   - "Kaizhao Sun"
   - "Zhengzhong Ricky You"
+alphabeticalAuthors: true
 journal: "Operations Research (Planned Submission)"
 submitted: true
 tags:

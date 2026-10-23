@@ -9,6 +9,9 @@ author:
   - "Zuo-Jun Max Shen"
   - "Haris N. Koutsopoulos"
   - "Jinhua Zhao"
+coFirstAuthors:
+  - "Baichuan Mo"
+  - "Zhengzhong Ricky You"
 journal: "Transportation Science (Reject and Resubmit)"
 submitted: true
 summary: >-
