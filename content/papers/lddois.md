@@ -1,5 +1,5 @@
 ---
-weight: 7
+weight: 5
 title: "Learned Pairwise Deep Dual-Optimal Inequalities for Stabilizing Column Generation"
 date: 2026-07-15
 author:

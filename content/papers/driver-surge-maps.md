@@ -1,5 +1,5 @@
 ---
-weight: 11
+weight: 9
 title: "Driver Surge Maps for Supply Rebalancing with Downstream Matching"
 date: 2026-10-23
 author:
@@ -20,7 +20,7 @@ tags:
   - "supply rebalancing"
 ---
 
-Working paper. To be submitted to *Manufacturing & Service Operations Management*.
+To be submitted to *Manufacturing & Service Operations Management*.
 
 Yida Xu, Baichuan Mo, and Zhengzhong Ricky You contributed equally.
 

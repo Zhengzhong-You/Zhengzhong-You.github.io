@@ -1,5 +1,5 @@
 ---
-weight: 12
+weight: 10
 title: "TorchDCM: A Unified PyTorch-Native Package for Discrete Choice Modeling"
 date: 2026-08-04
 author:

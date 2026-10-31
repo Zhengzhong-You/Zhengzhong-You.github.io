@@ -1,7 +1,8 @@
 ---
-weight: 4
+weight: 14
 title: "Towards Routing Foundation Models for Commercial Vehicles"
 date: 2026-09-20
+conference: true
 author:
   - "Bo Tang"
   - "Yunfei Ma"

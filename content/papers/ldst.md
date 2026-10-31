@@ -1,5 +1,5 @@
 ---
-weight: 14
+weight: 12
 title: "Log-Driven Semantic Tuning for Mixed Integer Programming Solvers"
 date: 2026-10-30
 author:

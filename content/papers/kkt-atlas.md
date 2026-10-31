@@ -1,5 +1,5 @@
 ---
-weight: 9
+weight: 7
 title: "KKT Atlas: Learning Low-Dimensional Local Scenario Models for Contextual Stochastic Optimization"
 date: 2026-10-23
 author:
@@ -14,6 +14,6 @@ tags:
   - "contextual stochastic optimization"
 ---
 
-Working paper. To be submitted to *Operations Research*.
+To be submitted to *Operations Research*.
 
 - Full paper: [PDF](/papers/kkt-atlas-preprint.pdf)

@@ -1,5 +1,5 @@
 ---
-weight: 10
+weight: 8
 title: "Debiasing Optimal Values in Stochastic Programming by Averaging Solutions"
 date: 2026-10-23
 author:
@@ -15,6 +15,6 @@ tags:
   - "stochastic programming"
 ---
 
-Working paper. To be submitted to *Operations Research*.
+To be submitted to *Operations Research*.
 
 Authors are listed alphabetically by last name.

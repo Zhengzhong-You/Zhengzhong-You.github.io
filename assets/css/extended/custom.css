@@ -772,6 +772,11 @@ body {
     white-space: normal;
 }
 
+.publication-type-heading {
+    margin: 28px 0 12px;
+    font-size: 1.25rem;
+}
+
 .publication-compact-section {
     margin-top: 22px;
 }

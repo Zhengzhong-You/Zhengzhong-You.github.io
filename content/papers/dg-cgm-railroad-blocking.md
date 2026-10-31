@@ -1,5 +1,5 @@
 ---
-weight: 13
+weight: 11
 title: "A Dual-Guided Column-Generation-Based Matheuristic for Integrated Railroad Blocking"
 date: 2026-10-30
 author:
@@ -16,7 +16,7 @@ tags:
   - "working paper"
 ---
 
-Working paper. To be submitted to *Transportation Science*.
+To be submitted to *Transportation Science*.
 
 The associated team is a finalist in the 2026 INFORMS Railway Applications Section (RAS) Problem Solving Competition.
 
