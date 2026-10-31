@@ -24,6 +24,7 @@
       {{- else if not .Params.hideStatus }} Working paper.
       {{- end }}
     </p>
+    {{- with .Params.recognition }}<p class="compact-cv-details">{{ . }}</p>{{ end }}
   </li>
   {{- end }}
 </ol>
