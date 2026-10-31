@@ -10,7 +10,7 @@
     --border: #d9d9dd;
     --darkcolor: #111215;
     --lightcolor: var(--surface-bg);
-    --accent-blue: #1863dc;
+    --accent-blue: #33363d;
     --nav-width: 1320px;
     --main-width: 1180px;
     --radius: 22px;
@@ -450,8 +450,8 @@ body {
 .button:hover {
     transform: translateY(-1px);
     color: var(--accent-blue);
-    border-color: rgba(24, 99, 220, 0.22);
-    background: rgba(24, 99, 220, 0.02);
+    border-color: rgba(17, 18, 21, 0.22);
+    background: rgba(17, 18, 21, 0.02);
 }
 
 .post-entry {
@@ -762,9 +762,9 @@ body {
     align-items: center;
     padding: 3px 10px;
     border-radius: 999px;
-    border: 1px solid rgba(24, 99, 220, 0.14);
-    background: rgba(24, 99, 220, 0.06);
-    color: #0f4aa5;
+    border: 1px solid rgba(17, 18, 21, 0.14);
+    background: rgba(17, 18, 21, 0.06);
+    color: #3b3e47;
     max-width: 100%;
     font-size: 0.875rem;
     font-weight: 600;
