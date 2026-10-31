@@ -1,51 +1,34 @@
 {{- define "main" }}
+<header class="page-header"><h1>{{ .Title }}</h1></header>
 
-{{- if .Title }}
-<header class="page-header">
-  <h1>
-    {{ .Title }}
-  </h1>
-</header>
-{{- end }}
-
-{{- if .Content }}
-<div class="post-content compact-list-intro">
-  {{- if not (.Param "disableAnchoredHeadings") }}
-  {{- partial "anchored_headings.html" .Content -}}
-  {{- else }}{{ .Content }}{{ end }}
-</div>
-{{- end }}
-
-{{- $previousType := "" }}
-{{- $previousStatus := "" }}
-{{- range $index, $paper := .RegularPages.ByWeight }}
-  {{- $type := cond (.Params.conference | default false) "Conference Papers" "Journal Papers" }}
-  {{- $tags := .Params.tags | default (slice) }}
-  {{- $working := or .Params.submitted (in $tags "working paper") (not .Params.journal) }}
-  {{- $status := cond $working "Working Papers" "Published" }}
-  {{- if or (ne $type $previousType) (ne $status $previousStatus) }}
-    {{- if $previousType }}</ol></section>{{ end }}
-    {{- if ne $type $previousType }}<h2 class="publication-type-heading">{{ $type }}</h2>{{ end }}
-    <section class="publication-compact-section{{ if $working }} publication-working-section{{ end }}" aria-labelledby="publication-group-{{ $index }}-heading">
-      <h3 id="publication-group-{{ $index }}-heading" class="publication-compact-heading">{{ $status }}</h3>
-      <ol class="publication-timeline{{ if $working }} publication-timeline-working{{ else }} publication-timeline-published{{ end }}">
+<ol class="compact-cv-list">
+  {{- range .RegularPages.ByWeight }}
+  <li class="compact-cv-item">
+    <div class="compact-cv-title">
+      {{- if .Params.alphabeticalAuthors }}<sup title="Authors listed alphabetically by last name">‡</sup> {{ end -}}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </div>
+    <p class="compact-cv-details">
+      {{- partial "paper_authors.html" . -}}.
+      {{- $venue := .Params.journal | default "" -}}
+      {{- $prefix := "" -}}
+      {{- range $status, $label := dict "Under Review" "Under review at" "Major Revision" "Major revision at" "Reject and Resubmit" "Reject and resubmit at" "Planned Submission" "To be submitted to" -}}
+        {{- $suffix := printf " (%s)" $status -}}
+        {{- if strings.HasSuffix $venue $suffix -}}
+          {{- $venue = strings.TrimSuffix $suffix $venue -}}
+          {{- $prefix = $label -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if $venue -}}
+        {{- " " -}}{{ if $prefix }}{{ $prefix }} {{ end }}<em>{{ $venue }}</em>{{ if and (not $prefix) (not .Params.conference) }}, {{ .Date.Format "2006" }}{{ end }}.
+      {{- else if not .Params.hideStatus }} Working paper.
+      {{- end }}
+    </p>
+  </li>
   {{- end }}
-        <li class="publication-timeline-item">
-          <a class="publication-timeline-link" href="{{ .RelPermalink }}" aria-label="Read paper: {{ .Title | plainify }}">
-            <time class="publication-timeline-date" datetime="{{ .Date.Format "2006" }}">{{ .Date.Format "2006" }}</time>
-            <span class="publication-timeline-copy">
-              <span class="publication-timeline-title">{{ if .Params.alphabeticalAuthors }}<sup title="Authors listed alphabetically by last name">‡</sup> {{ end }}{{ .Title }}</span>
-              <span class="publication-timeline-meta">
-                {{- if and (not .Params.journal) (not .Params.hideStatus) }}<span class="publication-working-badge">Working paper</span>{{ end }}
-                {{- with .Params.journal }}<span class="publication-venue-badge">{{ . }}</span>{{ end }}
-                {{- if .Params.author }}<span class="publication-author-line">{{ partial "paper_authors.html" . }}</span>{{ end }}
-              </span>
-            </span>
-          </a>
-        </li>
-  {{- $previousType = $type }}
-  {{- $previousStatus = $status }}
-{{- end }}
-{{- if $previousType }}</ol></section>{{ end }}
+</ol>
 
+{{- with .Content }}
+<div class="compact-cv-notes">{{ . }}</div>
+{{- end }}
 {{- end }}

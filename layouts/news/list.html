@@ -1,37 +1,11 @@
 {{- define "main" }}
-
-{{- if .Title }}
-<header class="page-header news-list-header">
-  <h1>
-    {{ .Title }}
-  </h1>
-</header>
-{{- end }}
-
-{{- if .Content }}
-<div class="post-content compact-list-intro news-list-intro">
-  {{- if not (.Param "disableAnchoredHeadings") }}
-  {{- partial "anchored_headings.html" .Content -}}
-  {{- else }}{{ .Content }}{{ end }}
-</div>
-{{- end }}
-
+<header class="page-header"><h1>{{ .Title }}</h1></header>
 {{- $paginator := .Paginate (.RegularPages.ByDate.Reverse) }}
-
-<ol class="news-timeline" aria-label="News timeline">
+<ol class="compact-cv-list" start="{{ add 1 (mul (sub $paginator.PageNumber 1) $paginator.PagerSize) }}">
   {{- range $paginator.Pages }}
-  <li class="news-timeline-item">
-    <a class="news-timeline-link" href="{{ .RelPermalink }}" aria-label="Read news: {{ .Title | plainify }}">
-      <time class="news-timeline-date" datetime="{{ .Date.Format "2006-01-02" }}">
-        {{- .Date.Format "Jan 2, 2006" -}}
-      </time>
-      <span class="news-timeline-copy">
-        <span class="news-timeline-title">{{ .Title }}</span>
-        {{- with .Params.summary }}
-        <span class="news-timeline-summary">{{ . | plainify | htmlUnescape }}</span>
-        {{- end }}
-      </span>
-    </a>
+  <li class="compact-cv-item">
+    <div class="compact-cv-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+    <p class="compact-cv-details compact-cv-summary"><time class="compact-cv-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ with .Params.summary }} · {{ . | plainify | htmlUnescape }}{{ end }}</p>
   </li>
   {{- end }}
 </ol>
@@ -59,4 +33,4 @@
 </footer>
 {{- end }}
 
-{{- end }}{{- /* end main */ -}}
+{{- end }}
