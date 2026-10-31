@@ -16,7 +16,6 @@ summary: >-
   constraints, combining branch-bound-and-remember search with valid
   column-generation bounds and independently checked solutions.
 tags:
-  - "working paper"
   - "bin packing"
   - "generalized precedence constraints"
   - "assembly line balancing"

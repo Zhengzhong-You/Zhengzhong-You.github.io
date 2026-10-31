@@ -9,7 +9,6 @@ author:
 journal: "Transportation Science (Major Revision)"
 submitted: true
 tags:
-  - "working paper"
   - "transit disruptions"
 ---
 

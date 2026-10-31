@@ -13,8 +13,6 @@ journal: "Transportation Science (Planned Submission)"
 recognition: "Finalist, 2026 INFORMS RAS Problem Solving Competition."
 submitted: true
 summary: "A dual-guided column-generation-based matheuristic for integrated railroad blocking, coordinating block design, blocking sequences, and block routing."
-tags:
-  - "working paper"
 ---
 
 To be submitted to *Transportation Science*.

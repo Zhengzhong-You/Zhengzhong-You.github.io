@@ -10,7 +10,6 @@ author:
 journal: "Operations Research (Planned Submission)"
 submitted: true
 tags:
-  - "working paper"
   - "contextual stochastic optimization"
 ---
 

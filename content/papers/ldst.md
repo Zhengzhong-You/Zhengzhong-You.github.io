@@ -10,11 +10,7 @@ author:
   - "Xinshang Wang"
 submitted: true
 summary: "Log-driven semantic tuning uses large language models to inspect solver diagnostics and propose validated parameter edits for mixed-integer programming solvers."
-tags:
-  - "working paper"
 ---
-
-Working paper.
 
 Log-Driven Semantic Tuning (LDST) uses large language models to inspect diagnostics extracted from solver logs, propose sparse edits to solver parameters, and validate each proposal before execution. A regime-adaptive objective and a log-based completion signal support tuning across solved and time-limited runs.
 

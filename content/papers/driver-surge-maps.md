@@ -16,7 +16,6 @@ coFirstAuthors:
 journal: "Manufacturing & Service Operations Management (Planned Submission)"
 submitted: true
 tags:
-  - "working paper"
   - "supply rebalancing"
 ---
 

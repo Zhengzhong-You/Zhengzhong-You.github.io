@@ -11,7 +11,6 @@ alphabeticalAuthors: true
 journal: "Operations Research (Planned Submission)"
 submitted: true
 tags:
-  - "working paper"
   - "stochastic programming"
 ---
 
