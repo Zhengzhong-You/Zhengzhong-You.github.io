@@ -6,7 +6,6 @@ author:
   - "Zhengzhong Ricky You"
   - "Baichuan Mo"
   - "Jinhua Zhao"
-  - "Zuo-Jun Max Shen"
 journal: "Operations Research (Planned Submission)"
 submitted: true
 tags:
@@ -15,3 +14,5 @@ tags:
 ---
 
 Working paper. To be submitted to *Operations Research*.
+
+- Full paper: [PDF](/papers/kkt-atlas-preprint.pdf)

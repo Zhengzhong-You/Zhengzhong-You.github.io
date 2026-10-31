@@ -23,3 +23,5 @@ tags:
 Working paper. To be submitted to *Manufacturing & Service Operations Management*.
 
 Yida Xu, Baichuan Mo, and Zhengzhong Ricky You contributed equally.
+
+- Full paper: [PDF](/papers/driver-surge-maps-preprint.pdf)
