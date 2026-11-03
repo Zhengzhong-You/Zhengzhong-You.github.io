@@ -16,4 +16,4 @@ Log-Driven Semantic Tuning (LDST) uses large language models to inspect diagnost
 
 - Code and data: [GitHub](https://github.com/Zhengzhong-You/LDST)
 
-- Full paper: [PDF](/papers/ldst-preprint.pdf)
+- Full paper: [arXiv:2611.00621](https://arxiv.org/abs/2611.00621)

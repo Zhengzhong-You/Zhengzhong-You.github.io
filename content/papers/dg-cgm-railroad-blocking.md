@@ -23,4 +23,4 @@ Yida Xu and Zhengzhong Ricky You contributed equally.
 
 The matheuristic combines a Dantzig-Wolfe reformulation with feasible construction, destroy-and-repair search, dual-guided path generation, and joint repair for integrated railroad blocking.
 
-- Full paper: [PDF](/papers/dg-cgm-railroad-blocking-preprint.pdf)
+- Full paper: [arXiv:2610.41403](https://arxiv.org/abs/2610.41403)
