@@ -10,14 +10,14 @@ coFirstAuthors:
   - "Yida Xu"
   - "Zhengzhong Ricky You"
 journal: "Transportation Science (Planned Submission)"
-recognition: "Finalist, 2026 INFORMS RAS Problem Solving Competition."
+recognition: "Third Prize, 2026 INFORMS RAS Problem Solving Competition."
 submitted: true
 summary: "A dual-guided column-generation-based matheuristic for integrated railroad blocking, coordinating block design, blocking sequences, and block routing."
 ---
 
 To be submitted to *Transportation Science*.
 
-The associated team is a finalist in the 2026 INFORMS Railway Applications Section (RAS) Problem Solving Competition.
+The team received Third Prize in the 2026 INFORMS Railway Applications Section (RAS) Problem Solving Competition.
 
 Yida Xu and Zhengzhong Ricky You contributed equally.
 
