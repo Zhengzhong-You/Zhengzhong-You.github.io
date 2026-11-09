@@ -76,6 +76,8 @@ params:
         url: talks/
       - name: News
         url: news/
+      - name: Recommenders
+        url: "#recommenders"
       - name: RouteOpt
         url: https://github.com/Zhengzhong-You/RouteOpt
 

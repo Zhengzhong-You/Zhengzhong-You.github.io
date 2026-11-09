@@ -223,6 +223,75 @@ body {
     margin: 8px 0 0 20px;
 }
 
+.profile-home-extra #recommenders {
+    scroll-margin-top: 24px;
+}
+
+.profile-home-extra .recommenders-note {
+    margin: -4px 0 14px;
+    color: var(--secondary);
+    font-size: 0.88rem;
+}
+
+.recommenders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.recommender-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 16px 18px;
+    border: 1px solid var(--tertiary);
+    border-radius: 12px;
+}
+
+.recommender-card h3 {
+    margin: 0 0 4px;
+    font-size: 1.12rem;
+    line-height: 1.3;
+}
+
+.recommender-card h3 a {
+    text-decoration: none;
+}
+
+.recommender-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.profile-home-extra .recommender-affiliation {
+    margin: 0 0 12px;
+    color: var(--secondary);
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.recommender-email,
+.recommender-website {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.recommender-email {
+    margin-top: auto;
+}
+
+.recommender-website {
+    margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+    .recommenders-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .profile-photo-stack {
     display: flex;
     width: 216px;
