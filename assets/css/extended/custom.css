@@ -225,7 +225,7 @@ body {
 
 .profile-photo-stack {
     display: flex;
-    width: 172px;
+    width: 216px;
     justify-content: center;
 }
 
@@ -252,8 +252,8 @@ body {
     justify-self: start;
 }
 
-.profile-portrait {
-    width: 172px;
+.profile .profile-portrait {
+    width: 216px;
     height: auto !important;
     object-fit: contain !important;
     object-position: center top !important;
@@ -1011,13 +1011,16 @@ body {
         object-position: 50% 12%;
     }
 
-    .profile-portrait {
-        width: 148px;
+    .profile .profile-portrait {
+        width: 184px;
         height: auto !important;
         border-radius: 0;
     }
 
-    .profile-photo-stack,
+    .profile-photo-stack {
+        width: 184px;
+    }
+
     .profile-visitor-map {
         width: 148px;
     }
