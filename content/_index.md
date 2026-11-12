@@ -22,52 +22,15 @@ I am interested in collaborating on problems at the intersection of exact optimi
 
 ## Recommenders
 
-<p class="recommenders-note">Listed alphabetically by last name.</p>
+<p class="recommenders-note">Alphabetical by last name.</p>
 
-<div class="recommenders-grid">
-  <article class="recommender-card">
-    <h3><a href="https://www.chkwon.net/" target="_blank" rel="noopener noreferrer">Changhyun Kwon</a></h3>
-    <p class="recommender-affiliation">KAIST</p>
-    <a class="recommender-email" href="mailto:chkwon@kaist.ac.kr">chkwon@kaist.ac.kr</a>
-    <a class="recommender-website" href="https://www.chkwon.net/" target="_blank" rel="noopener noreferrer" aria-label="Changhyun Kwon's personal website">Personal website <span aria-hidden="true">↗</span></a>
-  </article>
-  <article class="recommender-card">
-    <h3><a href="https://www.tsinghuamos.com/en/team/baichuan_mo.html" target="_blank" rel="noopener noreferrer">Baichuan Mo</a></h3>
-    <p class="recommender-affiliation">Tsinghua University</p>
-    <a class="recommender-email" href="mailto:bmo@tsinghua.edu.cn">bmo@tsinghua.edu.cn</a>
-    <a class="recommender-website" href="https://www.tsinghuamos.com/en/team/baichuan_mo.html" target="_blank" rel="noopener noreferrer" aria-label="Baichuan Mo's personal website">Personal website <span aria-hidden="true">↗</span></a>
-  </article>
-  <article class="recommender-card">
-    <h3><a href="https://www.columbia.edu/~hq2157/" target="_blank" rel="noopener noreferrer">Huajie Qian</a></h3>
-    <p class="recommender-affiliation">Alibaba DAMO Academy</p>
-    <a class="recommender-email" href="mailto:h.qian@columbia.edu">h.qian@columbia.edu</a>
-    <a class="recommender-website" href="https://www.columbia.edu/~hq2157/" target="_blank" rel="noopener noreferrer" aria-label="Huajie Qian's personal website">Personal website <span aria-hidden="true">↗</span></a>
-  </article>
-  <article class="recommender-card">
-    <h3><a href="https://zj-maxshen.github.io/" target="_blank" rel="noopener noreferrer">Zuo-Jun (Max) Shen</a></h3>
-    <p class="recommender-affiliation">The University of Hong Kong</p>
-    <a class="recommender-email" href="mailto:maxshen@hku.hk">maxshen@hku.hk</a>
-    <a class="recommender-website" href="https://zj-maxshen.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Zuo-Jun (Max) Shen's personal website">Personal website <span aria-hidden="true">↗</span></a>
-  </article>
-  <article class="recommender-card">
-    <h3><a href="https://botang.org/" target="_blank" rel="noopener noreferrer">Bo Tang</a></h3>
-    <p class="recommender-affiliation">MIT Sloan School of Management</p>
-    <a class="recommender-email" href="mailto:botang@mit.edu">botang@mit.edu</a>
-    <a class="recommender-website" href="https://botang.org/" target="_blank" rel="noopener noreferrer" aria-label="Bo Tang's personal website">Personal website <span aria-hidden="true">↗</span></a>
-  </article>
-  <article class="recommender-card">
-    <h3><a href="https://www.columbia.edu/~xw2230/" target="_blank" rel="noopener noreferrer">Xinshang Wang</a></h3>
-    <p class="recommender-affiliation">Alibaba DAMO Academy</p>
-    <a class="recommender-email" href="mailto:xinshang.w@alibaba-inc.com">xinshang.w@alibaba-inc.com</a>
-    <a class="recommender-website" href="https://www.columbia.edu/~xw2230/" target="_blank" rel="noopener noreferrer" aria-label="Xinshang Wang's personal website">Personal website <span aria-hidden="true">↗</span></a>
-  </article>
-  <article class="recommender-card">
-    <h3><a href="https://wotaoyin.mathopt.com/" target="_blank" rel="noopener noreferrer">Wotao Yin</a></h3>
-    <p class="recommender-affiliation">Alibaba DAMO Academy</p>
-    <a class="recommender-email" href="mailto:wotao.yin@alibaba-inc.com">wotao.yin@alibaba-inc.com</a>
-    <a class="recommender-website" href="https://wotaoyin.mathopt.com/" target="_blank" rel="noopener noreferrer" aria-label="Wotao Yin's personal website">Personal website <span aria-hidden="true">↗</span></a>
-  </article>
-</div>
+- [Changhyun Kwon](https://www.chkwon.net/)
+- [Baichuan Mo](https://www.tsinghuamos.com/en/team/baichuan_mo.html)
+- [Huajie Qian](https://www.columbia.edu/~hq2157/)
+- [Zuo-Jun (Max) Shen](https://zj-maxshen.github.io/)
+- [Bo Tang](https://botang.org/)
+- [Xinshang Wang](https://www.columbia.edu/~xw2230/)
+- [Wotao Yin](https://wotaoyin.mathopt.com/)
 
 ## Contact
 
