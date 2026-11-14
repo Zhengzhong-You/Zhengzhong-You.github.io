@@ -5,6 +5,7 @@ date: 2026-10-23
 author:
   - "Zhengzhong Ricky You"
   - "Baichuan Mo"
+  - "Yuan Zhou"
   - "Jinhua Zhao"
   - "Zuo-Jun Max Shen"
 journal: "Operations Research (Planned Submission)"
