@@ -268,7 +268,7 @@ body {
     object-fit: contain !important;
     object-position: center top !important;
     display: block;
-    border-radius: 0;
+    border-radius: 50%;
 }
 
 .profile-cat-image {
@@ -1024,7 +1024,7 @@ body {
     .profile .profile-portrait {
         width: 184px;
         height: auto !important;
-        border-radius: 0;
+        border-radius: 50%;
     }
 
     .profile-photo-stack {
