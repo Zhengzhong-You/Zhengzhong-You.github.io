@@ -7,7 +7,7 @@ author:
   - "Bo Tang"
   - "Haoran Liu"
   - "Baichuan Mo"
-journal: "INFORMS Journal on Computing (Under Review)"
+journal: "INFORMS Journal on Computing (Under Major Revision)"
 submitted: true
 summary: >-
   Column generation is central to many large-scale optimization algorithms,
@@ -25,7 +25,7 @@ listFigure: "/publication-figures/l-pddois-pipeline.png"
 listFigureAlt: "Prediction and postprocessing pipeline for learned pairwise deep dual-optimal inequalities"
 ---
 
-Under review at *INFORMS Journal on Computing*.
+Under major revision at *INFORMS Journal on Computing*.
 
 - arXiv: [2607.13373](https://arxiv.org/abs/2607.13373)
 - Preprint: [PDF](/papers/l-pddois-preprint.pdf)
