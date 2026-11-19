@@ -1,5 +1,5 @@
 ---
-weight: 3
+weight: 4
 title: "Equity-Enforced Path Recommendation in Congested Transit Systems During Disruptions"
 date: 2026-10-23
 author:

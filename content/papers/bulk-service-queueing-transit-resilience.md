@@ -1,5 +1,5 @@
 ---
-weight: 4
+weight: 5
 title: "Bulk Service Queueing for Transit Resilience under Short Random Service Suspensions"
 date: 2026-07-21
 author:
