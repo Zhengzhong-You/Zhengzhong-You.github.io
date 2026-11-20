@@ -83,7 +83,7 @@ params:
 
   socialIcons:
     - name: cv
-      url: "cv.pdf?v=20261119-major-revision"
+      url: "cv.pdf"
       title: CV
     - name: email
       url: mailto:ricky.you.or@gmail.com
