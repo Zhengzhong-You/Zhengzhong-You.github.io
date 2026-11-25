@@ -17,6 +17,6 @@ The competition focuses on the *Railroad Blocking Problem for North American Cla
 
 The final round took place at the INFORMS Annual Meeting in San Francisco on November 2, 2026.
 
-- Related research: [DG-CGM for Integrated Railroad Blocking](/papers/dg-cgm-railroad-blocking/)
+- Related research: [DG-CGM for Integrated Railroad Blocking](https://arxiv.org/pdf/2610.41403)
 
 - Competition page: [2026 INFORMS RAS Problem Solving Competition](https://connect.informs.org/railway-applications/new-item3/problem-solving-competition682)

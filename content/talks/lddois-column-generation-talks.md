@@ -17,4 +17,4 @@ I presented this topic at the 2025 INFORMS Annual Meeting and it is scheduled ag
   - 2026 Transportation Science & Logistics Conference
   - 2025 INFORMS Annual Meeting
 - Related paper:
-  - [Learned Pairwise Deep Dual-Optimal Inequalities for Stabilizing Column Generation](/papers/lddois/)
+  - [Learned Pairwise Deep Dual-Optimal Inequalities for Stabilizing Column Generation](https://arxiv.org/pdf/2607.13373)

@@ -45,6 +45,7 @@
 
   {{- if .RawContent }}
   <div class="post-content">
+    {{ with .Params.paperPDF }}<p><a href="{{ . }}">Full paper (PDF)</a></p>{{ end }}
     {{- .RawContent | markdownify -}}
   </div>
   {{- end }}

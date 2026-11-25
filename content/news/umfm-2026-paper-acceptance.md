@@ -23,4 +23,4 @@ UMFM 2026 will be held on November 3, 2026, in Riverside, California, as part of
 
 - Workshop page: [ACM SIGSPATIAL 2026 Workshops](https://sigspatial2026.sigspatial.org/workshops.html)
 
-Update (October 23, 2026): the [official workshop program](https://rsvp.withgoogle.com/events/sigspatial-2026-umfm-workshop) now lists the [paper](/papers/routing-foundation-models/) in the Vision Papers session on November 3.
+Update (October 23, 2026): the [official workshop program](https://rsvp.withgoogle.com/events/sigspatial-2026-umfm-workshop) now lists the [paper](/papers/routing-foundation-models-umfm-2026.pdf) in the Vision Papers session on November 3.

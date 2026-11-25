@@ -1,4 +1,5 @@
 ---
+paperPDF: "https://cdn.jsdelivr.net/gh/mlresearch/v306@main/assets/min26g/min26g.pdf"
 weight: 13
 title: "Draft-and-Audit Reinforcement Learning for Optimization Modeling"
 date: 2026-04-30T12:17:00-04:00

@@ -1,4 +1,5 @@
 ---
+paperPDF: "https://arxiv.org/pdf/2611.00621"
 weight: 12
 title: "Log-Driven Semantic Tuning for Mixed Integer Programming Solvers"
 date: 2026-10-30
@@ -15,5 +16,3 @@ summary: "Log-driven semantic tuning uses large language models to inspect solve
 Log-Driven Semantic Tuning (LDST) uses large language models to inspect diagnostics extracted from solver logs, propose sparse edits to solver parameters, and validate each proposal before execution. A regime-adaptive objective and a log-based completion signal support tuning across solved and time-limited runs.
 
 - Code and data: [GitHub](https://github.com/Zhengzhong-You/LDST)
-
-- Full paper: [arXiv:2611.00621](https://arxiv.org/abs/2611.00621)

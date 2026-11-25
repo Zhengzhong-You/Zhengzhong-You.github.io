@@ -1,4 +1,5 @@
 ---
+paperPDF: "https://arxiv.org/pdf/2610.41403"
 weight: 10
 title: "A Dual-Guided Column-Generation-Based Matheuristic for Integrated Railroad Blocking"
 date: 2026-10-30
@@ -22,5 +23,3 @@ The team received Third Prize in the 2026 INFORMS Railway Applications Section (
 Yida Xu and Zhengzhong Ricky You contributed equally.
 
 The matheuristic combines a Dantzig-Wolfe reformulation with feasible construction, destroy-and-repair search, dual-guided path generation, and joint repair for integrated railroad blocking.
-
-- Full paper: [arXiv:2610.41403](https://arxiv.org/abs/2610.41403)

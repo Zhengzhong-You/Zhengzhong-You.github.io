@@ -15,5 +15,5 @@ Finalist presentation for the 2026 INFORMS Railway Applications Section (RAS) Pr
 
 Our team was selected as one of five finalists from 26 final-report submissions. The associated research develops a dual-guided column-generation-based matheuristic for integrated railroad blocking.
 
-- Related paper: [A Dual-Guided Column-Generation-Based Matheuristic for Integrated Railroad Blocking](/papers/dg-cgm-railroad-blocking/)
+- Related paper: [A Dual-Guided Column-Generation-Based Matheuristic for Integrated Railroad Blocking](https://arxiv.org/pdf/2610.41403)
 - Award: [Third Prize at the 2026 INFORMS RAS Problem Solving Competition](/news/informs-ras-2026-problem-solving-competition-finalist/)

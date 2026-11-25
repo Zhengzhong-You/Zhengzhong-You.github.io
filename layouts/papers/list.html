@@ -6,7 +6,7 @@
   <li class="compact-cv-item">
     <div class="compact-cv-title">
       {{- if .Params.alphabeticalAuthors }}<sup title="Authors listed alphabetically by last name">‡</sup> {{ end -}}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <a href="{{ .Params.paperPDF | default .RelPermalink }}">{{ .Title }}</a>
     </div>
     <p class="compact-cv-details">
       {{- partial "paper_authors.html" . -}}.
@@ -22,6 +22,7 @@
       {{- if $venue -}}
         {{- " " -}}{{ if $prefix }}{{ $prefix }} {{ end }}<em>{{ $venue }}</em>{{ if and (not $prefix) (not .Params.conference) }}, {{ .Date.Format "2006" }}{{ end }}.
       {{- end }}
+      {{- if .Params.paperPDF }} <a href="{{ .RelPermalink }}">Details</a>{{ end }}
     </p>
     {{- with .Params.recognition }}<p class="compact-cv-details">{{ . }}</p>{{ end }}
   </li>

@@ -5,13 +5,13 @@
 {{- if and (not .CurrentSection.IsHome) (gt (len $pages) 1) (in $pages . ) }}
 <nav class="paginav" aria-label="More in {{ .CurrentSection.Title }}">
   {{- with $pages.Next . }}
-  <a class="prev" href="{{ .Permalink }}">
+  <a class="prev" href="{{ .Params.paperPDF | default .Permalink }}">
     <span class="paginav-label">&larr; Previous</span>
     <span>{{ .Name }}</span>
   </a>
   {{- end }}
   {{- with $pages.Prev . }}
-  <a class="next" href="{{ .Permalink }}">
+  <a class="next" href="{{ .Params.paperPDF | default .Permalink }}">
     <span class="paginav-label">Next &rarr;</span>
     <span>{{ .Name }}</span>
   </a>

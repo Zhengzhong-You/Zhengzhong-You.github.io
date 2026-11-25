@@ -17,4 +17,4 @@ I first presented this line of work at the 2023 INFORMS Annual Meeting and later
   - 2025 UK AI/ML Symposium and Nontechnical Workshop
   - 2023 INFORMS Annual Meeting
 - Related paper:
-  - [Two-Stage Learning to Branch in Branch-Price-and-Cut Algorithms for Solving Vehicle Routing Problems Exactly](/papers/two-stage-learning-to-branch/)
+  - [Two-Stage Learning to Branch in Branch-Price-and-Cut Algorithms for Solving Vehicle Routing Problems Exactly](/papers/2lbb_preprint.pdf)

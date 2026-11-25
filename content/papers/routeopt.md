@@ -1,4 +1,5 @@
 +++
+paperPDF = "/papers/routeopt_preprint.pdf"
 weight = 2
 title = "RouteOpt: An Open-Source Modular Exact Solver for Vehicle Routing Problems"
 date = 2026-04-04
@@ -13,7 +14,6 @@ listFigureAlt = "Simplified RouteOpt class diagram"
 *INFORMS Journal on Computing*, 2026.
 
 - DOI: [10.1287/ijoc.2025.1415](https://pubsonline.informs.org/doi/10.1287/ijoc.2025.1415)
-- Preprint: [PDF](/papers/routeopt_preprint.pdf)
 - Repository: [GitHub](https://github.com/Zhengzhong-You/RouteOpt)
 - Documentation: [RouteOpt Docs](https://zhengzhong-you.github.io/RouteOpt-Docs/)
 - Replication archive: [INFORMSJoC/2025.1415](https://github.com/INFORMSJoC/2025.1415)
