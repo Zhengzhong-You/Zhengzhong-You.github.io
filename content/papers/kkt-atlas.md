@@ -17,4 +17,4 @@ tags:
 
 To be submitted to *Operations Research*.
 
-- Original website copy: [PDF](/papers/kkt-atlas-preprint.pdf)
+- Website mirror: [PDF](/papers/kkt-atlas-preprint.pdf)

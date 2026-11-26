@@ -24,4 +24,4 @@ To be submitted to *Manufacturing & Service Operations Management*.
 
 Yida Xu, Baichuan Mo, and Zhengzhong Ricky You contributed equally.
 
-- Original website copy: [PDF](/papers/driver-surge-maps-preprint.pdf)
+- Website mirror: [PDF](/papers/driver-surge-maps-preprint.pdf)
